@@ -1,0 +1,213 @@
+AssetForProductCounter
+ApplyingResult
+"Name": "step3CreateCharacteristicValueUpdateResult"
+
+{
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+            "GlossDef": {
+                        "para": "A meta-mark'up language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "marakup",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+2018-12-04T11:52:36.572+01:00 - SLM={"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}/=SLM
+
+{
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+            "GlossDef": {
+                        "para": "A meta-mark'up language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "marakup",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML"
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+
+{
+ "AdminChargeDiscount=": {
+                  "Value": 5,
+                  "UnitOfMeasurement": "usd",
+                  "DiscountType": "ABSOLUTE",
+                  "ActionId": "26",
+                  "ExecutedAction": "OneTimeAbsoluteLinearDiscountModifier",
+                  "DiscountAction": "SetAbsoluteDiscount",
+                  "Target": "PROMOTION_FOR",
+                  "Interval": "3.000000 quantity",
+                  "MaxNumberOfTargets": "1.000000 quantity",
+                  "AssetForProductCounter": null,
+                  "AssetForDiscountCounter": null,
+                  "TaggedEventRecordValues": {}
+                },
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              
+}
+
+
+{
+  "glossqqary" : {
+    "titwwle" : "example glossary",
+    "GalossDiv" : {
+      "GloccssList" : {
+        "GlossEntry" : {
+          "GlvvossTerm" : "Standard Generalized Markup Language",
+          "GlossSee" : "markup",
+          "SorjhtAs" : "SGML",
+          "GlossDef" : {
+            "para" : "A meta-markup language, used to create markup languages such as DocBook.",
+            "GlossSeeAlso" : [ "GML", "XML" ]
+          },
+          "IwD" : "SGML",
+          "Acrornym" : "SGML",
+          "Abbyrev" : "ISO 8879:1986"
+        }
+      },
+      "tivtle" : "S"
+    }
+  }
+}
+
+
+asfsSDDDDDFDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SDFSDFSDFSDFSDF
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "CharacteristicValueProposalActivity",
+  "Methods": [
+    {
+      "Name": "step1FetchData",
+      "Info": [
+        "FETCH_DATA"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step2CollectCharacteristicValueUpdates",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step3CreateCharacteristicValueUpdateResult",
+      "Info": [
+        {
+          "CharacteristicValueUpdateResult": {
+            "CharacteristicValueNotificationProposal": []
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+{
+ "AdminChargeDiscount=": {
+                  "Value": 5,
+                  "UnitOfMeasurement": "usd",
+                  "DiscountType": "ABSOLUTE",
+                  "ActionId": "26",
+                  "ExecutedAction": "OneTimeAbsoluteLinearDiscountModifier",
+                  "DiscountAction": "SetAbsoluteDiscount",
+                  "Target": "PROMOTION_FOR",
+                  "Interval": "3.000000 quantity",
+                  "MaxNumberOfTargets": "1.000000 quantity",
+                  "AssetForProductCounter": null,
+                  "AssetForDiscountCounter": null,
+                  "TaggedEventRecordValues": {}
+                },
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              
+}
+2018-12-04T11:52:36.572+01:00 - SLM={"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}/=SLM

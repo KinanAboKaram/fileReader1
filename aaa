@@ -1,0 +1,497 @@
+kghghh{
+  "RequestData": null,
+  "Runtimeflow": "Online_Session_Epilogue",
+  "Activity": "ProductStatusProposalActivity",
+  "Methods": [
+    {
+      "Name": "step1FetchData",
+      "DataContainer": null,
+      "Info": [
+        "FETCH_DATA"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step2CollectProposedProducts",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step3CreateProposalResult",
+      "DataContainer": null,
+      "Info": [
+        {
+          "ProductStatusResult": {
+            "ProductStatusProposalMap": {}
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductStatusResult": {
+        "ProductStatusResult": {
+          "ProductStatusProposalMap": {}
+        }
+      }
+    }
+  ]
+}
+sdasdasdafgjk
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "ProductSelectionActivity",
+  "Methods": [
+    {
+      "Name": "createProductSelectionFactory",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductSelection": "ProductSelectionImpl
+{
+    CustomerFacingServices = {\"Id\":\"76259dea-80f9-47ce-a890-efd238171537\",\"SpecificationId\":\"76259dea-80f9-47ce-a890-efd238171537\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[db25b021-a29f-4beb-a51b-d56074438692]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+    \",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+    ResourceFacingService = {\"Id\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SpecificationId\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+    {
+        DenialPeriod = <null>
+        MaxFraudAttempts = 0
+    }\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UpDownDataWithDynQuotaLoadReg\",\"Characteristics\":{}}
+    ProductSelectionContext = FOR_USAGE
+}"
+    }
+  ]
+}
+
+{"MainSessionRequest":
+ "com.ericsson.bss.r"}
+
+ssssssssssssssss
+ {
+  "RequestData": null,
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "FinishRecurrenceEvaluationActivity",
+  "Methods": [
+    {
+      "Name": "sendResponse",
+      "DataContainer": null,
+      "Info": [
+        "!! Response":{
+           \"Flow result code\": \"SUCCESS\",
+           \"Optional message\": {
+             \"Code\": \"CLEAN\"
+           }
+         }"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": null
+}
+ {
+  "Runtimeflow": "Online_Session_Epilogue",
+  "Activity": "AsyncUpdateBucketsDataActivityForDuplicateDetection",
+  "Methods": [
+    {
+      "Name": "updateCustomer",
+      "ReturnValue": "ASYNC THEN 'NEXT'"
+    },
+    {
+      "Name": "updateCustomerResultValidation",
+      "Info": [
+        "bucketSnapshots 
+            billingAccountBucketBalances (Array, size : 1) 
+               balance 
+                  amount 
+                     decimalPlaces = 6 
+                     number = 950000 
+                  unitOfMeasurement = euro 
+               billingAccountBucketId = BILLING_ACCOUNT_BUCKET_ID 
+               billingAccountBucketSpecificationId = 03017aea-cbf5-4acc-80a1-1772b3f9a41f 
+               billingAccountId = 11 
+               billingAccountSpecificationId = MainBillingAccountSpecId 
+            productBucketBalances (Array, size : 0) 
+         customerInformation 
+            additionalData (Map, size : 0) 
+            communicationId 
+               communicationIdType = <empty> 
+               communicationIdValue = 1000 
+            contractId = 123456 
+            customerId = 12345 
+         eventHeader 
+            chargingInstanceHost = sekalvd633 
+            eventCreationTime 
+               timeZoneType = SYSTEM_TIME_ZONE 
+               timestamp = 2018-10-11T06:08:55.498Z 
+               zoneName = <empty> 
+            recordUniqueId = b36238d3-4850-493c-a2ce-d1b4ea935cf9 
+         genericInterfaceParameters 
+            externalParameterSet = <empty> 
+            originatingParameterSet = <empty> 
+            passingParameterSet = <empty> 
+            tracingParameterSet = <empty> 
+         schemaName = ChaUsageChargeEvent 
+         schemaNameSpace = com.ericsson.bss.cha.event.schema 
+         schemaVersion = 11.6.0 
+         serviceRequestData = <empty> 
+         serviceUsageInformation 
+            cfsIds (Array, size : 1) 
+               [0] = fa22c14a-699b-4426-96bd-f439730d0116 
+            cfsRecords = <empty> 
+            normalizedData 
+               nesId = e55efac2-2fdb-4673-8948-f802d6505285 
+               nesVersion = <empty> 
+               normalizedEventParameters (Map, size : 2) 
+                 ratingGroup
+                  intList (Array, size : 0) 
+                  intValue = 123456789 
+                  stringValue = <empty> 
+                 cellGlobalId
+                  intList (Array, size : 0) 
+                  intValue = <empty> 
+                  stringValue = 310-002-12345-2 
+            rfsId = 39b7739d-8563-49c0-a2d4-60d052e542c5 
+            rfsSpecificationId = 39b7739d-8563-49c0-a2d4-60d052e542c5 
+            sessionInformation 
+               serviceSessionId = 123ABC 
+               serviceSessionOperationType = INTERIM 
+               sessionId = MAIN_SESSION_ID 
+               sessionOperationNumber = 1 
+               sessionOperationType = INTERIM 
+            startOfCall = <empty> 
+            triggerTime 
+               timeZoneType = CURRENT_TIME_ZONE 
+               timestamp = 2017-12-25T14:11:00+02:00 
+               zoneName = <empty> 
+            usedUnitsList (Array, size : 1) 
+               consumptionTime 
+                  timeZoneType = CURRENT_TIME_ZONE 
+                  timestamp = 2017-12-25T14:11:00+02:00 
+                  zoneName = <empty> 
+               units (Array, size : 1) 
+                  amountWithUnit 
+                     amount 
+                        decimalPlaces = 0 
+                        number = 50000000 
+                     unitOfMeasurement = byte 
+                  direction = <empty> 
+                  measure = Data 
+         serviceUsageResult 
+            ProductUsageResults (Array, size : 1) 
+               cfsId = fa22c14a-699b-4426-96bd-f439730d0116 
+               cfsSpecificationId = fa22c14a-699b-4426-96bd-f439730d0116 
+               consumptionTime 
+                  timeZoneType = CURRENT_TIME_ZONE 
+                  timestamp = 2017-12-25T14:11:00+02:00 
+                  zoneName = <empty> 
+               productUsage 
+                  bundleProduct = <empty> 
+                  discountedProductId = <empty> 
+                  discountedProductOfferingId = <empty> 
+                  productType = base 
+                  usedProductId = DataProduct 
+                  usedProductOfferingId = PO_DataOffer_a2485ab8-0059-45b4-b0ae-56ed9955e5db 
+                  usedProductSpecificationId = PO_DataOffer_a2485ab8-0059-45b4-b0ae-56ed9955e5db 
+               productUsageRates (Array, size : 1) 
+                  appliedRates (Array, size : 3) 
+                     chargingInterval 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 6 
+                              number = 0 
+                           unitOfMeasurement = Undefined 
+                        direction = <empty> 
+                        measure = Undefined 
+                     price 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 0 
+                              number = 2 
+                           unitOfMeasurement = eurocent 
+                        direction = <empty> 
+                        measure = EUR 
+                     unit 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 0 
+                              number = 10 
+                           unitOfMeasurement = megabyte 
+                        direction = Uplink 
+                        measure = Data 
+                     chargingInterval 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 6 
+                              number = 0 
+                           unitOfMeasurement = Undefined 
+                        direction = <empty> 
+                        measure = Undefined 
+                     price 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 0 
+                              number = 1 
+                           unitOfMeasurement = eurocent 
+                        direction = <empty> 
+                        measure = EUR 
+                     unit 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 0 
+                              number = 10 
+                           unitOfMeasurement = megabyte 
+                        direction = Downlink 
+                        measure = Data 
+                     chargingInterval 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 6 
+                              number = 1000000 
+                           unitOfMeasurement = megabyte 
+                        direction = <empty> 
+                        measure = Data 
+                     price 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 0 
+                              number = 1 
+                           unitOfMeasurement = eurocent 
+                        direction = <empty> 
+                        measure = EUR 
+                     unit 
+                        amountWithUnit 
+                           amount 
+                              decimalPlaces = 0 
+                              number = 10 
+                           unitOfMeasurement = megabyte 
+                        direction = <empty> 
+                        measure = Data 
+                  atomicProductOfferingPriceId = 4f7a0917-5a62-4df7-9a7f-921e636dadf8 
+                  baseCost 
+                     amountWithUnit 
+                        amount 
+                           decimalPlaces = 6 
+                           number = 5000000 
+                        unitOfMeasurement = eurocent 
+                     direction = <empty> 
+                     measure = EUR 
+                  baseProductUsageRate (Array, size : 0) 
+                  billingAccountBuckets (Array, size : 3) 
+                     accountOperation = SUBTRACT 
+                     balanceChange 
+                        amount 
+                           decimalPlaces = 6 
+                           number = 0 
+                        unitOfMeasurement = euro 
+                     billingAccountBucketId = BILLING_ACCOUNT_BUCKET_ID 
+                     billingAccountBucketSpecificationId = 03017aea-cbf5-4acc-80a1-1772b3f9a41f 
+                     billingAccountId = 11 
+                     billingAccountSpecificationId = MainBillingAccountSpecId 
+                     customerBillCycleId = <empty> 
+                     sourceCustomerBillCycleId = <empty> 
+                     accountOperation = SUBTRACT 
+                     balanceChange 
+                        amount 
+                           decimalPlaces = 6 
+                           number = 0 
+                        unitOfMeasurement = euro 
+                     billingAccountBucketId = BILLING_ACCOUNT_BUCKET_ID 
+                     billingAccountBucketSpecificationId = 03017aea-cbf5-4acc-80a1-1772b3f9a41f 
+                     billingAccountId = 11 
+                     billingAccountSpecificationId = MainBillingAccountSpecId 
+                     customerBillCycleId = <empty> 
+                     sourceCustomerBillCycleId = <empty> 
+                     accountOperation = SUBTRACT 
+                     balanceChange 
+                        amount 
+                           decimalPlaces = 6 
+                           number = 50000 
+                        unitOfMeasurement = euro 
+                     billingAccountBucketId = BILLING_ACCOUNT_BUCKET_ID 
+                     billingAccountBucketSpecificationId = 03017aea-cbf5-4acc-80a1-1772b3f9a41f 
+                     billingAccountId = 11 
+                     billingAccountSpecificationId = MainBillingAccountSpecId 
+                     customerBillCycleId = <empty> 
+                     sourceCustomerBillCycleId = <empty> 
+                  chargedUnits (Array, size : 1) 
+                     amountWithUnit 
+                        amount 
+                           decimalPlaces = 0 
+                           number = 50000000 
+                        unitOfMeasurement = byte 
+                     direction = <empty> 
+                     measure = Data 
+                  compositeProductOfferingPriceId = 5c51aff4-b32a-422f-94d8-5a43c2d1af59 
+                  productBuckets (Array, size : 0) 
+                  productPriceId = <empty> 
+                  ratedCost 
+                     amountWithUnit 
+                        amount 
+                           decimalPlaces = 6 
+                           number = 5000000 
+                        unitOfMeasurement = eurocent 
+                     direction = <empty> 
+                     measure = EUR 
+                  ratedUnits (Array, size : 1) 
+                     amountWithUnit 
+                        amount 
+                           decimalPlaces = 0 
+                           number = 50000000 
+                        unitOfMeasurement = byte 
+                     direction = <empty> 
+                     measure = Data 
+            resultCode = 1000 
+            scenario = <empty> 
+            unratedUnits (Array, size : 1) 
+               amountWithUnit 
+                  amount 
+                     decimalPlaces = 0 
+                     number = 0 
+                  unitOfMeasurement = byte 
+               direction = <empty> 
+               measure = Data",
+        {},
+        "Processing post update actions"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "PromotionEventDataList": []
+    },
+    "No newly provisioned buckets for customer, skip Balance Creation Event"
+  ]
+}
+
+sssssssssssssssssssss
+
+{
+  "Runtimeflow": "Online_Session_Epilogue",
+  "Activity": "EventRecordActivity",
+  "Methods": [
+    {
+      "Name": "createEventData",
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "NotificationResultListGetter": "NotificationResultList
+{
+    NotificationResultList = []
+}"
+    },
+    {
+      "UpdateActionsKey": "com.ericsson.bss.rm.charging.dataaccess.sessionview.service.UpdateActions@6104a2"
+    }
+  ]
+}
+
+sssssssss
+
+{
+  "Runtimeflow": "Online_Session_Epilogue",
+  "Activity": "ResponseDataCreatorActivity",
+  "Methods": [
+    {
+      "Name": "setResponseData",
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ResponseData": "ResponseData:
+                    Data = [-48, 15, 2, 2, 14, 65, 66, 67, 68, 49, 50, 51, 12, 49, 50, 51, 65, 66, 67, -48, 15, 2, -112, 1, 2, 2, 2, -90, -97, -8, -6, 5, 0, 10, 84, 79, 84, 65, 76, 0, 0, 0, 0, 0, 2, 2, -10, -49, -91, 76, 0, 10, 84, 79, 84, 65, 76, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0, 2, 0, 0]
+               Schema Id = 110
+  Duplicate detection Id = 2
+            Time to live = 300
+           Response code = OK
+"
+    }
+  ]
+}
+
+asdas d asdasd
+
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Session_Epilogue",
+  "Activity": "ProductStatusProposalActivity",
+  "Methods": [
+    {
+      "Name": "step1FetchData",
+      "DataContainer": null,
+      "Info": [
+        "FETCH_DATA"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step2CollectProposedProducts",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step3CreateProposalResult",
+      "DataContainer": null,
+      "Info": [
+        {
+          "ProductStatusResult": {
+            "ProductStatusProposalMap": {}
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductStatusResult": {
+        "ProductStatusResult": {
+          "ProductStatusProposalMap": {}
+        }
+      }
+    }
+  ]
+}
+
+{
+  "Runtimeflow": "Online_Service_Session_Summary",
+  "Activity": "StorePartialResponseActivity",
+  "Methods": [
+    {
+      "Name": "storePartialResponse",
+      "Info": [
+        "Stored partial response in data container:
+              ResponseCode         = OK
+              GrantedUnits         = {\"GrantedUnits\": {\"TariffTimeChange\": \"null\", \"Units\": \"[{\"Source\":\"TOTAL\",\"Value\":\"799999955\",\"Code\":null,\"UnitOfMeasurement\":null,\"Direction\":null}]\",  } }
+              ServiceSessionId     = 123ABC
+              CorrelationId        = ABCD123
+              DynamicData          = {}
+              AnnouncementData     = null
+              ValidityTime         = 72
+              FinalUnitIndication  = null
+              QuotaThreshold       = [{\"Value\": {\"Numerator\": 79999995, \"DenominatorExponent\": 0}, \"Source\": \"TOTAL\", \"Code\": null, \"Direction\": null, \"UnitOfMeasurement\": null}]"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "AnnouncementResult": "AnnouncementResult [myResult={}]"
+    },
+    {
+      "PartialResponseList": []
+    }
+  ]
+}
+

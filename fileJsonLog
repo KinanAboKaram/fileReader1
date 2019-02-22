@@ -1,0 +1,93 @@
+2018-12-04T11:52:36.572+01:00 - SLM={"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}/=SLM
+{
+  "RequestData": {
+    "TimeoutNs": 1191850295031300,
+    "RuntimeflowName": null,
+    "CommunicationId": {
+      "Value": "1000",
+      "Type": "E.164"
+    },
+    "TriggerTime": "2014-12-05T18:59:30+01:00",
+    "ServiceContextId": "{\"ServiceContextId\":\"Ro-Gy\",\"ExternalServiceId\":\"onlinerateandchargero\"}",
+    "CustomerId": "12345",
+    "SegmentId": "{\"DistributedSegmentId\": {\"id\":\"cha3\"}}",
+    "ContractId": "123456",
+    "DuplicateDetectionId": "898",
+    "DynamicDataRecord": [
+      {
+        "Type": "DYNAMIC_STRING",
+        "Key": "MccMnc",
+        "Value": "24001"
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "LocationAreaCode",
+        "Value": 123
+      },
+      {
+        "Type": "DYNAMIC_STRING",
+        "Key": "User-Equipment-Info-User-Equipment-Info-Value",
+        "Value": "35715705"
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "CellId",
+        "Value": 456
+      },
+      {
+        "Type": "DYNAMIC_LIST",
+        "Key": "Service-Information-PS-Information-SGSN-Address",
+        "Value": [
+          {
+            "Type": "DYNAMIC_ADDRESS_STRING",
+            "Key": "0",
+            "Value": {
+              "Type": "IPV6_ADDRESS",
+              "Value": "2001:0db8:0000:0000:0000:0000:1428:07ab"
+            }
+          },
+          {
+            "Type": "DYNAMIC_ADDRESS_STRING",
+            "Key": "1",
+            "Value": {
+              "Type": "IPV4_ADDRESS",
+              "Value": "192.168.0.3"
+            }
+          }
+        ]
+      },
+      {
+        "Type": "DYNAMIC_ADDRESS_STRING",
+        "Key": "RecordingEntity",
+        "Value": {
+          "Type": "MSISDN_INTERNATIONAL",
+          "Value": "24002"
+        }
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "Service-Information-PS-Information-3GPP-RAT-Type",
+        "Value": 6
+      }
+    ],
+    "TraceIdentifier": null,
+    "FunctionControlStatus": "{c0000001=false, c0000002=false, c0000003=false, c0000004=false, c0000005=false, c0000006=false, c0000007=false, c0000008=false, c0000009=false, c0000010=true, c0000011=false, c0000012=true, c0000013=false, c0000014=false, c0000018=true, c0000019=false, c0000020=false, c0000021=false, c0000022=false, c0000023=false, c0000024=false, c0000025=false, c0000026=false, c0000027=false, c0000028=false, c0000029=false, c0000030=false, c0000031=false, c0000032=false, c0000033=false, c0000034=false, c0000035=false, c0000036=false, c0000037=false, c0000038=false, c0000039=false, c0000040=false, c0000041=false, c0000042=false, c0000043=false, c0000044=false, c0000045=false, c0000046=true, c0000047=false, c0000048=false, c0000049=false, c0000050=false, c0000051=false, c0000052=false, c0000053=false, c0000054=false, c0000055=false, c0000056=false, c0000057=false, c0000058=false, c0000059=false, c0000060=false, c0000061=false, c0000062=false, c0000064=false, c0000066=false, c0000067=false, c0000068=false, c0000069=false, c0000070=false, c0000071=false, c0000072=false, c0000073=false, c0000074=false, c0000075=false, c0000076=false, c0000077=false, c0000078=false, c0000079=false, c0000080=false, c0000081=false, c0000082=false, c0000083=false, c0000084=false, c0000085=false, c0000086=false, c0000087=false, c0000088=false, c0000089=false, p0000001=false}",
+    "PartitionId": "1",
+    "SessionId": "MAIN_SESSION_ID",
+    "OperationNumber": 2,
+    "OriginatorDomain": "org_domain",
+    "OriginatorHost": "aaa://137.225.202.247:4870",
+    "OriginatorStateId": 0,
+    "ServiceSessionId": null,
+    "CorrelationId": null,
+    "RequestedAction": "INTERIM",
+    "RequestedUnits": null,
+    "UsedUnits": null,
+    "ReservationId": null,
+    "StartOfCall": null,
+    "TransactionId": "1130919756",
+    "TraceInterfaceName": null,
+    "OriginatorApplicationGroup": "cha-g1",
+    "PopulateFeeAndConsumption": false
+  }
+}

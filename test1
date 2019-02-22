@@ -1,0 +1,1037 @@
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "ProductSelectionActivity",
+  "Methods": [
+    {
+      "Name": "createProductSelectionFactory",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductSelection": "ProductSelectionImpl
+{
+    CustomerFacingServices = {\"Id\":\"76259dea-80f9-47ce-a890-efd238171537\",\"SpecificationId\":\"76259dea-80f9-47ce-a890-efd238171537\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[db25b021-a29f-4beb-a51b-d56074438692]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+    \",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+    ResourceFacingService = {\"Id\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SpecificationId\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+    {
+        DenialPeriod = <null>
+        MaxFraudAttempts = 0
+    }\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UpDownDataWithDynQuotaLoadReg\",\"Characteristics\":{}}
+    ProductSelectionContext = FOR_USAGE
+}"
+    }
+  ]
+}
+{"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}
+{
+  "RequestData": null,
+  "Methods": [
+    {
+      "Name": "sendResponse",
+      "DataContainer": null,
+      "Info": [
+        "SendPrologueResponseActivity start",
+        "Found stored Dynamic Session Parameters for customer",
+        {
+          "Sending Prologue Response DynamicData: %s": [
+            
+            {
+              "Type": "DYNAMIC_LIST",
+              "Key": "Service-Information-PS-Information-SGSN-Address",
+              "Value": [
+                {
+                  "Type": "DYNAMIC_ADDRESS_STRING",
+                  "Key": "0",
+                  "Value": {
+                    "Type": "IPV6_ADDRESS",
+                    "Value": "2001:0db8:0000:0000:0000:0000:1428:07ab"
+                  }
+                },
+                {
+                  "Type": "DYNAMIC_ADDRESS_STRING",
+                  "Key": "1",
+                  "Value": {
+                    "Type": "IPV4_ADDRESS",
+                    "Value": "192.168.0.3"
+                  }
+                }
+              ]
+            },
+            {
+              "Type": "DYNAMIC_ADDRESS_STRING",
+              "Key": "RecordingEntity",
+              "Value": {
+                "Type": "MSISDN_INTERNATIONAL",
+                "Value": "24002"
+              }
+            },
+            {
+              "Type": "DYNAMIC_INTEGER",
+              "Key": "Service-Information-PS-Information-3GPP-RAT-Type",
+              "Value": 6
+            }
+          ]
+        },
+        "!! Response:{
+           \"Flow result code\": \"SUCCESS\",
+           \"Optional message\": [
+             {
+               \"Type\": \"DYNAMIC_STRING\",
+               \"Key\": \"MccMnc\",
+               \"Value\": \"24001\"
+             },
+             {
+               \"Type\": \"DYNAMIC_INTEGER\",
+               \"Key\": \"LocationAreaCode\",
+               \"Value\": 123
+             },
+             {
+               \"Type\": \"DYNAMIC_STRING\",
+               \"Key\": \"User-Equipment-Info-User-Equipment-Info-Value\",
+               \"Value\": \"35715705\"
+             },
+             {
+               \"Type\": \"DYNAMIC_INTEGER\",
+               \"Key\": \"CellId\",
+               \"Value\": 456
+             },
+             {
+               \"Type\": \"DYNAMIC_LIST\",
+               \"Key\": \"Service-Information-PS-Information-SGSN-Address\",
+               \"Value\": [
+                 {
+                   \"Type\": \"DYNAMIC_ADDRESS_STRING\",
+                   \"Key\": \"0\",
+                   \"Value\": {
+                     \"Type\": \"IPV6_ADDRESS\",
+                     \"Value\": \"2001:0db8:0000:0000:0000:0000:1428:07ab\"
+                   }
+                 },
+                 {
+                   \"Type\": \"DYNAMIC_ADDRESS_STRING\",
+                   \"Key\": \"1\",
+                   \"Value\": {
+                     \"Type\": \"IPV4_ADDRESS\",
+                     \"Value\": \"192.168.0.3\"
+                   }
+                 }
+               ]
+             },
+             {
+               \"Type\": \"DYNAMIC_ADDRESS_STRING\",
+               \"Key\": \"RecordingEntity\",
+               \"Value\": {
+                 \"Type\": \"MSISDN_INTERNATIONAL\",
+                 \"Value\": \"24002\"
+               }
+             },
+             {
+               \"Type\": \"DYNAMIC_INTEGER\",
+               \"Key\": \"Service-Information-PS-Information-3GPP-RAT-Type\",
+               \"Value\": 6
+             }
+           ]
+         }"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "MainSessionRequest": "com.ericsson.bss.rm.charging.service.usage.online.session.service.OnlineSessionRequestImpl@57b6a8dfCommunicationId={\"Value\":\"1000\",\"Type\":\"E.164\"} CustomerId=12345 DuplicateDetectionId=898 FunctionControlStatus=FunctionControlStatus : [functionStateList=[false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]] SessionId=MAIN_SESSION_ID RequestedAction=INTERIM"
+    }
+  ]
+}
+
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "ServiceDeterminationActivity",
+  "Methods": [
+    {
+      "Name": "readFromDataContainerCs",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "determineResourceFacingService",
+      "DataContainer": null,
+      "Info": [
+        "Found the RFSS ( Name: Gy-UpDownDataWithDynQuotaLoadReg { Id: db25b021-a29f-4beb-a51b-d56074438692 } ) for the Charging Service Gy-UpDownDataWithDynQuotaLoadReg"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "determineCustomerFacingService",
+      "DataContainer": null,
+      "Info": [
+        "Found CFSS ( Name: 76259dea-80f9-47ce-a890-efd238171537 { Id: 76259dea-80f9-47ce-a890-efd238171537 } ) for RFSS ( Name: Gy-UpDownDataWithDynQuotaLoadReg { Id: db25b021-a29f-4beb-a51b-d56074438692 } ) without configured rule view. The CFSS will automatically be chosen"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "writeToData Container",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ServiceDeterminationResultView": "{\"Id\":\"76259dea-80f9-47ce-a890-efd238171537\",\"SpecificationId\":\"76259dea-80f9-47ce-a890-efd238171537\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[db25b021-a29f-4beb-a51b-d56074438692]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+\",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+
+{\"Id\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SpecificationId\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+{
+    DenialPeriod = <null>
+    MaxFraudAttempts = 0
+}\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UpDownDataWithDynQuotaLoadReg\",\"Characteristics\":{}}"
+    },
+    {
+      "ServiceDeterminationResultView_V2": {}
+    }
+  ]
+}
+
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "ProductSelectionActivity",
+  "Methods": [
+    {
+      "Name": "createProductSelectionFactory",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductSelection": "ProductSelectionImpl
+{
+    CustomerFacingServices = {\"Id\":\"76259dea-80f9-47ce-a890-efd238171537\",\"SpecificationId\":\"76259dea-80f9-47ce-a890-efd238171537\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[db25b021-a29f-4beb-a51b-d56074438692]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+    \",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+    ResourceFacingService = {\"Id\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SpecificationId\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+    {
+        DenialPeriod = <null>
+        MaxFraudAttempts = 0
+    }\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UpDownDataWithDynQuotaLoadReg\",\"Characteristics\":{}}
+    ProductSelectionContext = FOR_USAGE
+}"
+    }
+  ]
+}
+
+{"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}
+asdasdasdassssssssssssssssssssssssssdasdasdasdassdasdasd{"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "ProductSelectionActivity",
+  "Methods": [
+    {
+      "Name": "createProductSelectionFactory",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductSelection": "ProductSelectionImpl
+{
+    CustomerFacingServices = {\"Id\":\"76259dea-80f9-47ce-a890-efd238171537\",\"SpecificationId\":\"76259dea-80f9-47ce-a890-efd238171537\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[db25b021-a29f-4beb-a51b-d56074438692]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+    \",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+    ResourceFacingService = {\"Id\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SpecificationId\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+    {
+        DenialPeriod = <null>
+        MaxFraudAttempts = 0
+    }\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UpDownDataWithDynQuotaLoadReg\",\"Characteristics\":{}}
+    ProductSelectionContext = FOR_USAGE
+}"
+    }
+  ]
+}
+sadasd
+{"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}
+
+
+
+asfasfasf
+asfas
+fa
+sfasf{}
+<<<<<<< HEAD
+
+=======
+
+
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Session_Prologue",
+  "Activity": "ProviderHandlerActivity",
+  "Methods": [
+    {
+      "Name": "initializeProviderHandler",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "providerHandler": {
+        "Prioritized consumers": [],
+        "Fetched consumers": [],
+        "Skipped consumers": []
+      }
+    }
+  ]
+}
+{
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+            "GlossDef": {
+                        "para": "A meta-mark'up language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "marakup",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+{
+  "glossqqary" : {
+    "titwwle" : "example glossary",
+    "GalossDiv" : {
+      "GloccssList" : {
+        "GlossEntry" : {
+          "GlvvossTerm" : "Standard Generalized Markup Language",
+          "GlossSee" : "markup",
+          "SorjhtAs" : "SGML",
+          "GlossDef" : {
+            "para" : "A meta-markup language, used to create markup languages such as DocBook.",
+            "GlossSeeAlso" : [ "GML", "XML" ]
+          },
+          "IwD" : "SGML",
+          "Acrornym" : "SGML",
+          "Abbyrev" : "ISO 8879:1986"
+        }
+      },
+      "tivtle" : "S"
+    }
+  }
+}
+
+
+asfsSDDDDDFDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SDFSDFSDFSDFSDF
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+2018-12-04T11:52:36.572+01:00 - SLM={"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}/=SLM
+
+{
+  "RequestData": {
+    "TimeoutNs": 1191850295031300,
+    "RuntimeflowName": null,
+    "CommunicationId": {
+      "Value": "1000",
+      "Type": "E.164"
+    },
+    "TriggerTime": "2014-12-05T18:59:30+01:00",
+    "ServiceContextId": "{\"ServiceContextId\":\"Ro-Gy\",\"ExternalServiceId\":\"onlinerateandchargero\"}",
+    "CustomerId": "12345",
+    "SegmentId": "{\"DistributedSegmentId\": {\"id\":\"cha3\"}}",
+    "ContractId": "123456",
+    "DuplicateDetectionId": "898",
+    "DynamicDataRecord": [
+      {
+        "Type": "DYNAMIC_STRING",
+        "Key": "MccMnc",
+        "Value": "24001"
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "LocationAreaCode",
+        "Value": 123
+      },
+      {
+        "Type": "DYNAMIC_STRING",
+        "Key": "User-Equipment-Info-User-Equipment-Info-Value",
+        "Value": "35715705"
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "CellId",
+        "Value": 456
+      },
+      {
+        "Type": "DYNAMIC_LIST",
+        "Key": "Service-Information-PS-Information-SGSN-Address",
+        "Value": [
+          {
+            "Type": "DYNAMIC_ADDRESS_STRING",
+            "Key": "0",
+            "Value": {
+              "Type": "IPV6_ADDRESS",
+              "Value": "2001:0db8:0000:0000:0000:0000:1428:07ab"
+            }
+          },
+          {
+            "Type": "DYNAMIC_ADDRESS_STRING",
+            "Key": "1",
+            "Value": {
+              "Type": "IPV4_ADDRESS",
+              "Value": "192.168.0.3"
+            }
+          }
+        ]
+      },
+      {
+        "Type": "DYNAMIC_ADDRESS_STRING",
+        "Key": "RecordingEntity",
+        "Value": {
+          "Type": "MSISDN_INTERNATIONAL",
+          "Value": "24002"
+        }
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "Service-Information-PS-Information-3GPP-RAT-Type",
+        "Value": 6
+      }
+    ],
+    "TraceIdentifier": null,
+    "FunctionControlStatus": "{c0000001=false, c0000002=false, c0000003=false, c0000004=false, c0000005=false, c0000006=false, c0000007=false, c0000008=false, c0000009=false, c0000010=true, c0000011=false, c0000012=true, c0000013=false, c0000014=false, c0000018=true, c0000019=false, c0000020=false, c0000021=false, c0000022=false, c0000023=false, c0000024=false, c0000025=false, c0000026=false, c0000027=false, c0000028=false, c0000029=false, c0000030=false, c0000031=false, c0000032=false, c0000033=false, c0000034=false, c0000035=false, c0000036=false, c0000037=false, c0000038=false, c0000039=false, c0000040=false, c0000041=false, c0000042=false, c0000043=false, c0000044=false, c0000045=false, c0000046=true, c0000047=false, c0000048=false, c0000049=false, c0000050=false, c0000051=false, c0000052=false, c0000053=false, c0000054=false, c0000055=false, c0000056=false, c0000057=false, c0000058=false, c0000059=false, c0000060=false, c0000061=false, c0000062=false, c0000064=false, c0000066=false, c0000067=false, c0000068=false, c0000069=false, c0000070=false, c0000071=false, c0000072=false, c0000073=false, c0000074=false, c0000075=false, c0000076=false, c0000077=false, c0000078=false, c0000079=false, c0000080=false, c0000081=false, c0000082=false, c0000083=false, c0000084=false, c0000085=false, c0000086=false, c0000087=false, c0000088=false, c0000089=false, p0000001=false}",
+    "PartitionId": "1",
+    "SessionId": "MAIN_SESSION_ID",
+    "OperationNumber": 2,
+    "OriginatorDomain": "org_domain",
+    "OriginatorHost": "aaa://137.225.202.247:4870",
+    "OriginatorStateId": 0,
+    "ServiceSessionId": null,
+    "CorrelationId": null,
+    "RequestedAction": "INTERIM",
+    "RequestedUnits": null,
+    "UsedUnits": null,
+    "ReservationId": null,
+    "StartOfCall": null,
+    "TransactionId": "1130919756",
+    "TraceInterfaceName": null,
+    "OriginatorApplicationGroup": "cha-g1",
+    "PopulateFeeAndConsumption": false
+  }
+}
+
+{
+  "RequestData": null,
+  "Methods": [
+    {
+      "Name": "sendResponse",
+      "DataContainer": null,
+      "Info": [
+        "SendPrologueResponseActivity start",
+        "Found stored Dynamic Session Parameters for customer",
+        {
+          "Sending Prologue Response DynamicData: %s": [
+            
+            {
+              "Type": "DYNAMIC_LIST",
+              "Key": "Service-Information-PS-Information-SGSN-Address",
+              "Value": [
+                {
+                  "Type": "DYNAMIC_ADDRESS_STRING",
+                  "Key": "0",
+                  "Value": {
+                    "Type": "IPV6_ADDRESS",
+                    "Value": "2001:0db8:0000:0000:0000:0000:1428:07ab"
+                  }
+                },
+                {
+                  "Type": "DYNAMIC_ADDRESS_STRING",
+                  "Key": "1",
+                  "Value": {
+                    "Type": "IPV4_ADDRESS",
+                    "Value": "192.168.0.3"
+                  }
+                }
+              ]
+            },
+            {
+              "Type": "DYNAMIC_ADDRESS_STRING",
+              "Key": "RecordingEntity",
+              "Value": {
+                "Type": "MSISDN_INTERNATIONAL",
+                "Value": "24002"
+              }
+            },
+            {
+              "Type": "DYNAMIC_INTEGER",
+              "Key": "Service-Information-PS-Information-3GPP-RAT-Type",
+              "Value": 6
+            }
+          ]
+        },
+        "!! Response:{
+           \"Flow result code\": \"SUCCESS\",
+           \"Optional message\": [
+             {
+               \"Type\": \"DYNAMIC_STRING\",
+               \"Key\": \"MccMnc\",
+               \"Value\": \"24001\"
+             },
+             {
+               \"Type\": \"DYNAMIC_INTEGER\",
+               \"Key\": \"LocationAreaCode\",
+               \"Value\": 123
+             },
+             {
+               \"Type\": \"DYNAMIC_STRING\",
+               \"Key\": \"User-Equipment-Info-User-Equipment-Info-Value\",
+               \"Value\": \"35715705\"
+             },
+             {
+               \"Type\": \"DYNAMIC_INTEGER\",
+               \"Key\": \"CellId\",
+               \"Value\": 456
+             },
+             {
+               \"Type\": \"DYNAMIC_LIST\",
+               \"Key\": \"Service-Information-PS-Information-SGSN-Address\",
+               \"Value\": [
+                 {
+                   \"Type\": \"DYNAMIC_ADDRESS_STRING\",
+                   \"Key\": \"0\",
+                   \"Value\": {
+                     \"Type\": \"IPV6_ADDRESS\",
+                     \"Value\": \"2001:0db8:0000:0000:0000:0000:1428:07ab\"
+                   }
+                 },
+                 {
+                   \"Type\": \"DYNAMIC_ADDRESS_STRING\",
+                   \"Key\": \"1\",
+                   \"Value\": {
+                     \"Type\": \"IPV4_ADDRESS\",
+                     \"Value\": \"192.168.0.3\"
+                   }
+                 }
+               ]
+             },
+             {
+               \"Type\": \"DYNAMIC_ADDRESS_STRING\",
+               \"Key\": \"RecordingEntity\",
+               \"Value\": {
+                 \"Type\": \"MSISDN_INTERNATIONAL\",
+                 \"Value\": \"24002\"
+               }
+             },
+             {
+               \"Type\": \"DYNAMIC_INTEGER\",
+               \"Key\": \"Service-Information-PS-Information-3GPP-RAT-Type\",
+               \"Value\": 6
+             }
+           ]
+         }"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "MainSessionRequest": "com.ericsson.bss.rm.charging.service.usage.online.session.service.OnlineSessionRequestImpl@57b6a8dfCommunicationId={\"Value\":\"1000\",\"Type\":\"E.164\"} CustomerId=12345 DuplicateDetectionId=898 FunctionControlStatus=FunctionControlStatus : [functionStateList=[false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]] SessionId=MAIN_SESSION_ID RequestedAction=INTERIM"
+    }
+  ]
+}
+
+fasfasfasfsfasfsasfs
+
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Interim",
+  "Activity": "ChargingServiceDeterminationActivity",
+  "Methods": [
+    {
+      "Name": "determineChargingServiceId",
+      "DataContainer": null,
+      "Info": [
+        "Determining charging service for context: Ro-Gy",
+        "TreeRule[
+         RuleContract[
+             DataDefinitionRepositoryWrapper[
+             DataDefinitionRepository[isLocal=false, dataDefinitions=[
+                 {key=DynamicParameter, value=DataDefinition[name=DynamicParameter, dataType=Object, collectionType=None, provider=DynamicRequestDataProvider]}
+                 {key=StaticParameter, value=DataDefinition[name=StaticParameter, dataType=Object, collectionType=None, provider=StaticRequestDataProvider]}
+                 {key=ChargingServicesList, value=DataDefinition[name=ChargingServicesList, dataType=String, collectionType=List]}
+                 {key=ChargingServiceId, value=DataDefinition[name=ChargingServiceId, dataType=String, collectionType=None]}]]
+             DataDefinitionRepository[isLocal=true, dataDefinitions=[
+                 {key=Multiple-Services-Credit-Control-Rating-Group, value=DataDefinition[name=Multiple-Services-Credit-Control-Rating-Group, dataType=IntegerNumber, collectionType=None, provider=DynamicRequestDataProvider, keys=[\"Multiple-Services-Credit-Control-Rating-Group\"]]}]]]]
+         Node[name=Charging Service Determination, children=[
+             Node[name=unnamed, children=[
+                 Modifier[name=Add Gy-UnitDeterminations]
+                 Modifier[name=Add Gy-SocialMedia]
+                 Modifier[name=Add Gy-Streaming]
+                 Modifier[name=Add Gy-MegaByteData]
+                 Modifier[name=Add Gy-UpDownData]
+                 Modifier[name=Add Gy-UpDownDataWithDynQuotaLoadReg]
+                 Modifier[name=Add Gy-100A2]
+                 Modifier[name=Add Gy-Data]]]
+             Node[name=Gy-UnitDeterminations, children=[
+                 Condition[name=Groups, children=[
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]]]
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]
+             Node[name=Gy-SocialMedia, children=[
+                 Condition[name=Groups, children=[
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]]]
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]
+             Node[name=Gy-Streaming, children=[
+                 Condition[name=Groups, children=[
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]]]
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]
+             Node[name=Gy-MegaByteData, children=[
+                 Condition[name=Groups, children=[
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]]]
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]
+             Node[name=Gy-UpDownData, children=[
+                 Condition[name=Groups, children=[
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]]]
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]
+             Node[name=Gy-UpDownDataWithDynQuotaLoadReg, children=[
+                 Condition[name=Groups, children=[
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]]]
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]
+             Node[name=Gy-100A2, children=[
+                 Condition[name=Groups, children=[
+                     Condition[name=Conditions, children=[
+                         Condition[name=Data should exist, children=[
+                             Condition[name=Does Rating-Group (Integer) exist]
+                             Condition[name=Rating-Group (Integer)]]]]]]]
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]
+             Node[name=Gy-Data, children=[
+                 Modifier[name=SetData]
+                 Modifier[name=Done, exiting]]]]]
+         ]",
+        "+-- Charging Service Determination
+    +-- unnamed
+    |   !-- Add Gy-UnitDeterminations
+    |   |     Add \"Gy-UnitDeterminations\" to collection ChargingServicesList
+    |   !-- Add Gy-SocialMedia
+    |   |     Add \"Gy-SocialMedia\" to collection ChargingServicesList
+    |   !-- Add Gy-Streaming
+    |   |     Add \"Gy-Streaming\" to collection ChargingServicesList
+    |   !-- Add Gy-MegaByteData
+    |   |     Add \"Gy-MegaByteData\" to collection ChargingServicesList
+    |   !-- Add Gy-UpDownData
+    |   |     Add \"Gy-UpDownData\" to collection ChargingServicesList
+    |   !-- Add Gy-UpDownDataWithDynQuotaLoadReg
+    |   |     Add \"Gy-UpDownDataWithDynQuotaLoadReg\" to collection ChargingServicesList
+    |   !-- Add Gy-100A2
+    |   |     Add \"Gy-100A2\" to collection ChargingServicesList
+    |   !-- Add Gy-Data
+    |         Add \"Gy-Data\" to collection ChargingServicesList
+    +-- Gy-UnitDeterminations
+    |   ?-- OR (Groups) [FALSE]
+    |       ?-- AND (Conditions) [FALSE]
+    |           ?-- AND (Data should exist) [FALSE]
+    |               ?-- Does Rating-Group (Integer) exist [TRUE]
+    |               |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |               ?-- Rating-Group (Integer) [FALSE]
+    |                     Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 123456789
+    +-- Gy-SocialMedia
+    |   ?-- OR (Groups) [FALSE]
+    |       ?-- AND (Conditions) [FALSE]
+    |       |   ?-- AND (Data should exist) [FALSE]
+    |       |       ?-- Does Rating-Group (Integer) exist [TRUE]
+    |       |       |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |       |       ?-- Rating-Group (Integer) [FALSE]
+    |       |             Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 20
+    |       ?-- AND (Conditions) [FALSE]
+    |           ?-- AND (Data should exist) [FALSE]
+    |               ?-- Does Rating-Group (Integer) exist [TRUE]
+    |               |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |               ?-- Rating-Group (Integer) [FALSE]
+    |                     Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 21
+    +-- Gy-Streaming
+    |   ?-- OR (Groups) [FALSE]
+    |       ?-- AND (Conditions) [FALSE]
+    |       |   ?-- AND (Data should exist) [FALSE]
+    |       |       ?-- Does Rating-Group (Integer) exist [TRUE]
+    |       |       |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |       |       ?-- Rating-Group (Integer) [FALSE]
+    |       |             Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 39
+    |       ?-- AND (Conditions) [FALSE]
+    |       |   ?-- AND (Data should exist) [FALSE]
+    |       |       ?-- Does Rating-Group (Integer) exist [TRUE]
+    |       |       |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |       |       ?-- Rating-Group (Integer) [FALSE]
+    |       |             Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 40
+    |       ?-- AND (Conditions) [FALSE]
+    |           ?-- AND (Data should exist) [FALSE]
+    |               ?-- Does Rating-Group (Integer) exist [TRUE]
+    |               |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |               ?-- Rating-Group (Integer) [FALSE]
+    |                     Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 41
+    +-- Gy-MegaByteData
+    |   ?-- OR (Groups) [FALSE]
+    |       ?-- AND (Conditions) [FALSE]
+    |           ?-- AND (Data should exist) [FALSE]
+    |               ?-- Does Rating-Group (Integer) exist [TRUE]
+    |               |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |               ?-- Rating-Group (Integer) [FALSE]
+    |                     Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 42
+    +-- Gy-UpDownData
+    |   ?-- OR (Groups) [FALSE]
+    |       ?-- AND (Conditions) [FALSE]
+    |           ?-- AND (Data should exist) [FALSE]
+    |               ?-- Does Rating-Group (Integer) exist [TRUE]
+    |               |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+    |               ?-- Rating-Group (Integer) [FALSE]
+    |                     Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 50
+    +-- Gy-UpDownDataWithDynQuotaLoadReg
+        ?-- OR (Groups) [TRUE]
+        |   ?-- AND (Conditions) [TRUE]
+        |       ?-- AND (Data should exist) [TRUE]
+        |           ?-- Does Rating-Group (Integer) exist [TRUE]
+        |           |     Check for Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"] existence
+        |           ?-- Rating-Group (Integer) [TRUE]
+        |                 Multiple-Services-Credit-Control-Rating-Group[\"Multiple-Services-Credit-Control-Rating-Group\"](60) equal 60
+        !-- SetData
+        |     ChargingServiceId = \"Gy-UpDownDataWithDynQuotaLoadReg\"
+        !-- Done, exiting [EXIT]
+              Execution interrupted
+",
+        "Determined charging service with Id: Gy-UpDownDataWithDynQuotaLoadReg"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ChargingServiceDeterminationResult": "ChargingServiceDeterminationResult [ChargingServiceId=Gy-UpDownDataWithDynQuotaLoadReg, ChargingServicesList=[]]"
+    }
+  ]
+}
+
+2018-12-04T11:52:36.572+01:00 - SLM={"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}/=SLM
+{
+  "RequestData": {
+    "TimeoutNs": 1191850295031300,
+    "RuntimeflowName": null,
+    "CommunicationId": {
+      "Value": "1000",
+      "Type": "E.164"
+    },
+    "TriggerTime": "2014-12-05T18:59:30+01:00",
+    "ServiceContextId": "{\"ServiceContextId\":\"Ro-Gy\",\"ExternalServiceId\":\"onlinerateandchargero\"}",
+    "CustomerId": "12345",
+    "SegmentId": "{\"DistributedSegmentId\": {\"id\":\"cha3\"}}",
+    "ContractId": "123456",
+    "DuplicateDetectionId": "898",
+    "DynamicDataRecord": [
+      {
+        "Type": "DYNAMIC_STRING",
+        "Key": "MccMnc",
+        "Value": "24001"
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "LocationAreaCode",
+        "Value": 123
+      },
+      {
+        "Type": "DYNAMIC_STRING",
+        "Key": "User-Equipment-Info-User-Equipment-Info-Value",
+        "Value": "35715705"
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "CellId",
+        "Value": 456
+      },
+      {
+        "Type": "DYNAMIC_LIST",
+        "Key": "Service-Information-PS-Information-SGSN-Address",
+        "Value": [
+          {
+            "Type": "DYNAMIC_ADDRESS_STRING",
+            "Key": "0",
+            "Value": {
+              "Type": "IPV6_ADDRESS",
+              "Value": "2001:0db8:0000:0000:0000:0000:1428:07ab"
+            }
+          },
+          {
+            "Type": "DYNAMIC_ADDRESS_STRING",
+            "Key": "1",
+            "Value": {
+              "Type": "IPV4_ADDRESS",
+              "Value": "192.168.0.3"
+            }
+          }
+        ]
+      },
+      {
+        "Type": "DYNAMIC_ADDRESS_STRING",
+        "Key": "RecordingEntity",
+        "Value": {
+          "Type": "MSISDN_INTERNATIONAL",
+          "Value": "24002"
+        }
+      },
+      {
+        "Type": "DYNAMIC_INTEGER",
+        "Key": "Service-Information-PS-Information-3GPP-RAT-Type",
+        "Value": 6
+      }
+    ],
+    "TraceIdentifier": null,
+    "FunctionControlStatus": "{c0000001=false, c0000002=false, c0000003=false, c0000004=false, c0000005=false, c0000006=false, c0000007=false, c0000008=false, c0000009=false, c0000010=true, c0000011=false, c0000012=true, c0000013=false, c0000014=false, c0000018=true, c0000019=false, c0000020=false, c0000021=false, c0000022=false, c0000023=false, c0000024=false, c0000025=false, c0000026=false, c0000027=false, c0000028=false, c0000029=false, c0000030=false, c0000031=false, c0000032=false, c0000033=false, c0000034=false, c0000035=false, c0000036=false, c0000037=false, c0000038=false, c0000039=false, c0000040=false, c0000041=false, c0000042=false, c0000043=false, c0000044=false, c0000045=false, c0000046=true, c0000047=false, c0000048=false, c0000049=false, c0000050=false, c0000051=false, c0000052=false, c0000053=false, c0000054=false, c0000055=false, c0000056=false, c0000057=false, c0000058=false, c0000059=false, c0000060=false, c0000061=false, c0000062=false, c0000064=false, c0000066=false, c0000067=false, c0000068=false, c0000069=false, c0000070=false, c0000071=false, c0000072=false, c0000073=false, c0000074=false, c0000075=false, c0000076=false, c0000077=false, c0000078=false, c0000079=false, c0000080=false, c0000081=false, c0000082=false, c0000083=false, c0000084=false, c0000085=false, c0000086=false, c0000087=false, c0000088=false, c0000089=false, p0000001=false}",
+    "PartitionId": "1",
+    "SessionId": "MAIN_SESSION_ID",
+    "OperationNumber": 2,
+    "OriginatorDomain": "org_domain",
+    "OriginatorHost": "aaa://137.225.202.247:4870",
+    "OriginatorStateId": 0,
+    "ServiceSessionId": null,
+    "CorrelationId": null,
+    "RequestedAction": "INTERIM",
+    "RequestedUnits": null,
+    "UsedUnits": null,
+    "ReservationId": null,
+    "StartOfCall": null,
+    "TransactionId": "1130919756",
+    "TraceInterfaceName": null,
+    "OriginatorApplicationGroup": "cha-g1",
+    "PopulateFeeAndConsumption": false
+  }
+}
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "ProductSelectionActivity",
+  "Methods": [
+    {
+      "Name": "createProductSelectionFactory",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductSelection": "ProductSelectionImpl
+{
+    CustomerFacingServices = {\"Id\":\"76259dea-80f9-47ce-a890-efd238171537\",\"SpecificationId\":\"76259dea-80f9-47ce-a890-efd238171537\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[db25b021-a29f-4beb-a51b-d56074438692]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+    \",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+    ResourceFacingService = {\"Id\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SpecificationId\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+    {
+        DenialPeriod = <null>
+        MaxFraudAttempts = 0
+    }\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UpDownDataWithDynQuotaLoadReg\",\"Characteristics\":{}}
+    ProductSelectionContext = FOR_USAGE
+}"
+    }
+  ]
+}
+
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "UnitDeterminationActivity",
+  "Methods": [
+    {
+      "Name": "unitDetermination",
+      "DataContainer": null,
+      "Info": [
+        {
+          "ConfiguredMeasuredUnits to rate": [
+            {
+              "MeasuredUnit": {
+                "Measurement": "200000000.000000 byte",
+                "Unit": {
+                  "Value": {
+                    "Exponent": 0,
+                    "Value": 200000000
+                  },
+                  "Source": "INPUT",
+                  "Code": null,
+                  "UoM": null,
+                  "Direction": null
+                }
+              },
+              "ConfigurationUnit": {
+                "QuotaThreshold": null,
+                "QuotaThresholdSurplus": null,
+                "MinimumGrantedServiceUnit": 0
+              }
+            },
+            {
+              "MeasuredUnit": {
+                "Measurement": "1000000000.000000 byte",
+                "Unit": {
+                  "Value": {
+                    "Exponent": 0,
+                    "Value": 1000000000
+                  },
+                  "Source": "OUTPUT",
+                  "Code": null,
+                  "UoM": null,
+                  "Direction": null
+                }
+              },
+              "ConfigurationUnit": {
+                "QuotaThreshold": null,
+                "QuotaThresholdSurplus": null,
+                "MinimumGrantedServiceUnit": 0
+              }
+            }
+          ],
+          "Units to report": []
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "UnitDeterminationResult": "{123ABC-DEFAULT={\"ConfiguredMeasuredUnits to rate:\":[{\"MeasuredUnit\":\"( Measurement {\"Value\":200000000,\"Uom\":\"byte.Uplink\"}, Unit {\"Source\":\"INPUT\",\"Value\":\"200000000\",\"Code\":null,\"UnitOfMeasurement\":null,\"Direction\":null})\",\"ConfigurationUnit\":{\"QuotaThreshold\":null,\"QuotaThresholdSurplus\":null,\"MinimumGrantedServiceUnit\":0}}, {\"MeasuredUnit\":\"( Measurement {\"Value\":1000000000,\"Uom\":\"byte.Downlink\"}, Unit {\"Source\":\"OUTPUT\",\"Value\":\"1000000000\",\"Code\":null,\"UnitOfMeasurement\":null,\"Direction\":null})\",\"ConfigurationUnit\":{\"QuotaThreshold\":null,\"QuotaThresholdSurplus\":null,\"MinimumGrantedServiceUnit\":0}}],\"Units to report:\":[]}}"
+    },
+    {
+      "UnitDeterminationRuleResult": "{\"Name\":\"Default\",\"Id\":null,\"ValidityTime\":30,\"ValidityTimemin\":15,\"ValidityTimeMax\":90,\"MaximumCost\":null,\"MeasuredUnits\":[{\"DefaultRSU\":10000000,\"Direction\":\"Downlink\",\"FilterRule\":\"allow\",\"Measure\":\"Data\",\"MinimumGSU\":0,\"OverConsumptionFactor\":1.0,\"RegulatorData\":{dynamicQuotaLoadRegulation=RegulatorParameters [myRegulatorParameters={dynamicUnitConstant=ContextServiceConfigurationParameter [myId=dynamicUnitConstant, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"double\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":null,\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":0.6,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}], dynamicMin=ContextServiceConfigurationParameter [myId=dynamicMin, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"measurement\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":{\"Value\":100,\"Uom\":\"kilobyte\"},\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":null,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}], dynamicTimeConstant=ContextServiceConfigurationParameter [myId=dynamicTimeConstant, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"double\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":null,\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":0.4,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}], dynamicMax=ContextServiceConfigurationParameter [myId=dynamicMax, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"measurement\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":{\"Value\":500,\"Uom\":\"megabyte\"},\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":null,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}]}]},\"OverrideRsuWithDefault\":false,\"QuotaThreshold\":null,\"QuotaThresholdSurplus\":null,\"Source\":null,\"UnitOfMeasurement\":null}, {\"DefaultRSU\":1000000,\"Direction\":\"Uplink\",\"FilterRule\":\"allow\",\"Measure\":\"Data\",\"MinimumGSU\":0,\"OverConsumptionFactor\":1.0,\"RegulatorData\":{dynamicQuotaLoadRegulation=RegulatorParameters [myRegulatorParameters={dynamicUnitConstant=ContextServiceConfigurationParameter [myId=dynamicUnitConstant, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"double\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":null,\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":0.6,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}], dynamicMin=ContextServiceConfigurationParameter [myId=dynamicMin, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"measurement\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":{\"Value\":100,\"Uom\":\"kilobyte\"},\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":null,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}], dynamicTimeConstant=ContextServiceConfigurationParameter [myId=dynamicTimeConstant, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"double\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":null,\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":0.4,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}], dynamicMax=ContextServiceConfigurationParameter [myId=dynamicMax, myAlias=null, myDirection=null, myParameterValue={\"ParameterValueType\":\"measurement\",\"IntegerValue\":null,\"StringValue\":null,\"BooleanValue\":null,\"MeasurementValue\":{\"Value\":100,\"Uom\":\"megabyte\"},\"ListOfStringsValue\":null,\"ListOfIntegersValue\":null,\"DoubleValue\":null,\"NESParameterValue\":null,\"ContractAttributeParameterValue\":null}]}]},\"OverrideRsuWithDefault\":false,\"QuotaThreshold\":null,\"QuotaThresholdSurplus\":null,\"Source\":null,\"UnitOfMeasurement\":null}, {\"DefaultRSU\":0,\"Direction\":\"\",\"FilterRule\":\"ignore\",\"Measure\":\"Data\",\"MinimumGSU\":0,\"OverConsumptionFactor\":1.0,\"RegulatorData\":{},\"OverrideRsuWithDefault\":false,\"QuotaThreshold\":null,\"QuotaThresholdSurplus\":null,\"Source\":null,\"UnitOfMeasurement\":null}, {\"DefaultRSU\":0,\"Direction\":\"\",\"FilterRule\":\"reject\",\"Measure\":\"Duration\",\"MinimumGSU\":0,\"OverConsumptionFactor\":1.0,\"RegulatorData\":{},\"OverrideRsuWithDefault\":false,\"QuotaThreshold\":null,\"QuotaThresholdSurplus\":null,\"Source\":null,\"UnitOfMeasurement\":null}]}"
+    }
+  ]
+}
+
+{
+  "RequestData": null,
+  "Runtimeflow": "Online_Service_Session_Deduct",
+  "Activity": "ProductSelectionActivity",
+  "Methods": [
+    {
+      "Name": "createProductSelectionFactory",
+      "DataContainer": null,
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "ProductSelection": "ProductSelectionImpl
+{
+    CustomerFacingServices = {\"Id\":\"76259dea-80f9-47ce-a890-efd238171537\",\"SpecificationId\":\"76259dea-80f9-47ce-a890-efd238171537\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[db25b021-a29f-4beb-a51b-d56074438692]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+    \",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+    ResourceFacingService = {\"Id\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SpecificationId\":\"db25b021-a29f-4beb-a51b-d56074438692\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+    {
+        DenialPeriod = <null>
+        MaxFraudAttempts = 0
+    }\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UpDownDataWithDynQuotaLoadReg\",\"Characteristics\":{}}
+    ProductSelectionContext = FOR_USAGE
+}"
+    }
+  ]
+}
+
+
+ sss
+
+{"MainSessionRequest":
+ "com.ericsson.bss.r"}
+ 
+ 
+ 
+ 

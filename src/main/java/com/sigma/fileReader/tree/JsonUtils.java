@@ -1,26 +1,22 @@
 package com.sigma.fileReader.tree;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Map.Entry;
 
 import javax.swing.JTree;
+import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
+import org.apache.wink.json4j.OrderedJSONObject;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.node.ArrayNode;
-import org.codehaus.jackson.node.ObjectNode;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 //import org.codehaus.jackson.JsonNode;
 //import org.codehaus.jackson.map.ObjectMapper;
@@ -35,113 +31,159 @@ public final class JsonUtils {
 		super();
 	}
 
-	private static Gson gson = new Gson();
+	public JsonNode rootJsonNode = null;
+	public JsonParser parser = new JsonParser();
+	private Gson gson = new Gson();
+	private ObjectMapper mapper = new ObjectMapper();
 
-	public static boolean isJSONValid(String jsonInString) {
+	public boolean isJSONValid(String jsonInString) {
 		try {
 			gson.fromJson(jsonInString, Object.class);
-
+//			parser.parse(jsonInString);
 			return true;
 		} catch (Exception e) {
-			// TODO: handle exception
 			return false;
 		}
 	}
 
-	static JsonParser parser = new JsonParser();
+	public void updateModel(ArrayList<String> jsonStringList, JTree tree) {
+		try {
 
-	public static void updateModel(ArrayList<String> jsonStringList, JTree tree) {
+			clearTree(tree);
 
-		DefaultMutableTreeNode root = addRoot("Root", jsonStringList);
-		tree.setModel(new DefaultTreeModel(root));
-		tree.setRootVisible(true);
+			DefaultMutableTreeNode root = addRoot("Root", jsonStringList);
+			DefaultTreeModel model = new DefaultTreeModel(root);
+			System.out.println("+");
+
+			tree.setModel(model);
+			model.reload();
+//			System.out.println(tree.getModel().toString());
+			tree.setRootVisible(true);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
-	public static DefaultMutableTreeNode addRoot(String rootName, ArrayList<String> jsonStringList) {
+	public DefaultMutableTreeNode addRoot(String rootName, ArrayList<String> jsonStringList) {
 
 		DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(rootName);
-<<<<<<< HEAD
-
 		for (int i = 0; i < jsonStringList.size(); i++) {
-=======
-		for (int i = 0; i < jsonStringList.size(); i++) {
-
->>>>>>> first Commit
 			try {
-				ObjectMapper mapper = new ObjectMapper();
-				parser.parse(jsonStringList.get(i));
+				System.out.println("---------------------------------------------------------------****-----------");
 
-<<<<<<< HEAD
-				JSONObject jObject = new JSONObject(jsonStringList.get(i));
+				// OrderedJsonObject add the string to linkdHashMap
+				OrderedJSONObject jObject = new OrderedJSONObject(jsonStringList.get(i));
+				rootJsonNode = mapper.readTree(jObject.toString());
 
-				JsonNode rootJsonNode = mapper.readTree(jObject.toString());
-
-=======
-				System.out.println("--------------------------------------------------------------------------");
-				System.out.println("num: "+i+" json "+jsonStringList.get(i));
-				JSONObject jObject = new JSONObject(jsonStringList.get(i));
-				JsonNode rootJsonNode = mapper.readTree(jObject.toString());
->>>>>>> first Commit
 				rootNode.add(buildTree(jsonStringList.get(i), rootJsonNode));
 
+//				System.out.println("-----------------------------------------------------------------------------");
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			} catch (JsonProcessingException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+
+				e.printStackTrace();
+			} catch (org.apache.wink.json4j.JSONException e) {
+
 				e.printStackTrace();
 			}
+
 		}
 		return rootNode;
 	}
 
-	private static DefaultMutableTreeNode buildTree(String name, JsonNode jsonNode)
+	private DefaultMutableTreeNode buildTree(String name, JsonNode jsonNode)
 			throws JSONException, JsonGenerationException, JsonMappingException, IOException {
 
 		DefaultMutableTreeNode treeNode = new DefaultMutableTreeNode(name);
-
 		Iterator<Entry<String, JsonNode>> iterator = jsonNode.getFields();
-		ObjectMapper mm = new ObjectMapper();
-<<<<<<< HEAD
-//		String fixdJson = mm.writerWithDefaultPrettyPrinter().writeValueAsString(jsonNode);
-////		System.out.println("-------------------------------------------------------------------");
-////		System.out.println(fixdJson);
-////		System.out.println("------------------------------------------------------------------");
-=======
-		String fixdJson = mm.writerWithDefaultPrettyPrinter().writeValueAsString(jsonNode);
-//		System.out.println("-------------------------------------------------------------------");
-//		System.out.println(fixdJson);
-//		System.out.println("------------------------------------------------------------------");
->>>>>>> first Commit
 		while (iterator.hasNext()) {
 			Entry<String, JsonNode> entry = iterator.next();
 
 			treeNode.add(buildTree(entry.getKey(), entry.getValue()));
 		}
-
 		if (jsonNode.isArray()) {
+			String childArray = null;
 			for (int i = 0; i < jsonNode.size(); i++) {
 				JsonNode child = jsonNode.get(i);
 
+				childArray = child.toString();
+				childArray = deleteSpecialCharacter(childArray);
+
 				if (child.isValueNode()) {
-
-					treeNode.add(new DefaultMutableTreeNode(child.asText()));
+					treeNode.add(new DefaultMutableTreeNode(childArray));
 				} else {
-
-					treeNode.add(buildTree(String.format("[%d]", i), child));
+					AddingArrayJson(child, treeNode);
 				}
-
 			}
-
 		} else if (jsonNode.isValueNode()) {
-
-			treeNode.add(new DefaultMutableTreeNode(jsonNode.asText()));
+			treeNode.add(new DefaultMutableTreeNode(jsonNode.toString()));
 		}
 		return treeNode;
 	}
 
+	private void AddingArrayJson(JsonNode child, DefaultMutableTreeNode treeNode)
+			throws JsonGenerationException, JsonMappingException, JSONException, IOException {
+		Iterator<Entry<String, JsonNode>> childIterator = child.getFields();
+
+		while (childIterator.hasNext()) {
+			Entry<String, JsonNode> entryChild = childIterator.next();
+			JsonNode childNode = entryChild.getValue();
+
+			if (childNode.isArray()) {
+				treeNode.add(buildTree(entryChild.getKey().toString(), childNode));
+
+			} else if (!childNode.isValueNode()) {
+				treeNode.add(buildTree(entryChild.getKey().toString(), childNode));
+			} else {
+				String value = null;
+				value = entryChild.getValue().toString();
+				value = deleteSpecialCharacter(value);
+				treeNode.add(new DefaultMutableTreeNode('"' + entryChild.getKey() + '"' + ": " + value));
+			}
+		}
+	}
+
+	public String deleteSpecialCharacter(String node) {
+
+		if (node.contains("\\r\\n")) {
+			node = node.replace("\\r\\n", "\r\n");
+			if (node.contains("\\n")) {
+				node = node.replace("\\n", "\n");
+			}
+		}
+		if (node.contains("\\n")) {
+			node = node.replace("\\n", "\n");
+			if (node.contains("\\r\\n")) {
+				node = node.replace("\\r\\n", "\r\n");
+			}
+		}
+		if (node.contains("\\r")) {
+			node = node.replace("\\r", "\r");
+		}
+		return node;
+	}
+
+	// it run if selected new file and delete the old tree and old selectionListener
+	// wnd will remove the root and all nodes and the model
+	public void clearTree(JTree tree) {
+		if (tree != null) {
+
+			for (TreeSelectionListener treeSelection : tree.getTreeSelectionListeners()) {
+				tree.removeTreeSelectionListener(treeSelection);
+			}
+			DefaultTreeModel model = (DefaultTreeModel) tree.getModel();
+			DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
+			root.removeAllChildren();
+			root = null;
+			model.reload();
+			model.setRoot(null);
+		}
+	}
 }

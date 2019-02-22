@@ -72,6 +72,13 @@
     <version>1.9.2</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.apache.wink/wink-json4j -->
+<dependency>
+    <groupId>org.apache.wink</groupId>
+    <artifactId>wink-json4j</artifactId>
+    <version>1.4</version>
+</dependency>
+
 
 	</dependencies>
 

@@ -1,0 +1,40 @@
+"{
+  "Runtimeflow": "Online_Service_Session_Reserve",
+  "Activity": "ServiceDeterminationActivity",
+  "Methods": [
+    {
+      "Name": "readFromDataContainerCs",
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "determineResourceFacingService",
+      "Info": [
+        "Found the RFSS 39b7739d-8563-49c0-a2d4-60d052e542c5 for the Charging Service Gy-UnitDeterminations"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "determineCustomerFacingService",
+      "Info": [
+        "Found CFSS(fa22c14a-699b-4426-96bd-f439730d0116) for RFSS(39b7739d-8563-49c0-a2d4-60d052e542c5) without configured rule view. The CFSS will automatically be chosen"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "writeToDataContainer",
+      "ReturnValue": "NEXT"
+    }
+  ],
+  "DataContainer": [
+    {
+      "\":\"fa22c14a-699b-4426-96bd-f439730d0116\",\"Validity\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ResourceFacingServices\":[[39b7739d-8563-49c0-a2d4-60d052e542c5], [544f00e1-dd5c-402f-868e-ef19b8f05cbf], [56bd9da9-8721-4515-904c-8dc4600de78d]],\"StatusViews\":\" {\"Reason\":\"activation\",\"ValidityTime\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"ValidFor\":\"TimePeriod [FromDateTime: Beginning of time, ToDateTime: End of time]\",\"Status\":\"SERVICE_ACTIVE\"}
+\",\"FilteringRule\":null,\"ScreeningRule\":null,\"ScenarioRule\":null,\"Characteristics\":{}}
+
+{\"Id\":\"39b7739d-8563-49c0-a2d4-60d052e542c5\",\"SpecificationId\":\"39b7739d-8563-49c0-a2d4-60d052e542c5\",\"SupplementaryServices\":\"\",\"Fraud\":\"FraudBlockViewImpl
+{
+    DenialPeriod = <null>
+    MaxFraudAttempts = 0
+}\",\"FilteringRule\":null,\"ScenarioRule\":null,\"ChargingService\":\"Gy-UnitDeterminations\",\"Characteristics\":{}}"
+    },
+  ]
+}
