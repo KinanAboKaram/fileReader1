@@ -40,15 +40,17 @@ public class SearchButton<E> {
 				String text = textArea.getText(0, textLength).toLowerCase();
 				text = jsonUtils.deleteSpecialCharacter(text);
 				Highlighter highlight = textArea.getHighlighter();
-				
+				int x= 0;
 				// find and highlight all the match in the text
 				int indxOfmatch = 0;
 				if (!search.isEmpty()) {
 					while ((indxOfmatch = text.indexOf(search, indxOfmatch)) >= 0) {
 						highlight.addHighlight(indxOfmatch, indxOfmatch + search.length(), MyHighLight);
 						indxOfmatch += search.length();
+						x++;
 					}
 				}
+				System.out.println("num x"+x);
 			} catch (BadLocationException e1) {
 				e1.printStackTrace();
 			}

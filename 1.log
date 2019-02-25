@@ -1,0 +1,2827 @@
+2019-02-14T16:27:27.766+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AdminChargeRequestImpl", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "0", "ContentType": "TEXT"}/=SLM
+{
+  "RequestData": {
+    "TimeoutNs": 10722193049577349,
+    "RuntimeflowName": "AdminCharge_Reserve",
+    "CommunicationId": null,
+    "TriggerTime": "2019-02-14T16:27:24.442+01:00",
+    "ServiceContextId": {
+      "ServiceContextId": "Standard-PurchaseCharge",
+      "ExternalServiceId": "purchasecharge"
+    },
+    "CustomerId": "326B513AB384427C8D703C9A867661C2",
+    "SegmentId": "{\"DistributedSegmentId\": {\"id\":\"cha4\"}}",
+    "ContractId": "8388CB6B392F4B12B3D57F1FE459171B",
+    "DuplicateDetectionId": "DuplicateDetectionId2",
+    "DynamicDataRecord": [],
+    "TraceIdentifier": null,
+    "FunctionControlStatus": "{c0000001=false, c0000002=false, c0000003=false, c0000004=false, c0000005=false, c0000006=false, c0000007=false, c0000008=false, c0000009=false, c0000010=true, c0000011=false, c0000012=true, c0000013=false, c0000014=false, c0000018=true, c0000019=false, c0000020=false, c0000021=false, c0000022=false, c0000023=false, c0000024=false, c0000025=false, c0000026=false, c0000027=false, c0000028=false, c0000029=false, c0000030=false, c0000031=false, c0000032=false, c0000033=false, c0000034=false, c0000035=false, c0000036=false, c0000037=false, c0000038=false, c0000039=false, c0000040=false, c0000041=false, c0000042=false, c0000043=false, c0000044=false, c0000045=false, c0000046=true, c0000047=false, c0000048=false, c0000049=false, c0000050=false, c0000051=false, c0000052=false, c0000053=false, c0000054=false, c0000055=false, c0000056=false, c0000057=false, c0000058=false, c0000059=false, c0000060=false, c0000061=false, c0000062=false, c0000064=false, c0000066=false, c0000067=false, c0000068=false, c0000069=false, c0000070=false, c0000071=false, c0000072=false, c0000073=false, c0000074=false, c0000075=false, c0000076=false, c0000077=false, c0000078=false, c0000079=false, c0000080=false, c0000081=false, c0000082=false, c0000083=false, c0000084=false, c0000085=false, c0000086=false, c0000087=false, c0000088=false, c0000089=false, c0000090=false, c0000091=false, c0000092=false, c0000093=false, c0000094=false, p0000001=false}",
+    "PartitionId": "1",
+    "ReservationId": "281f2e6d-70f2-4318-babb-e8d53b0d064f",
+    "ReferenceData": [],
+    "BasketProductOfferingData": {
+      "ProductOfferingReferences": [
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        },
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        },
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        },
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        }
+      ],
+      "PurchaseDiscountProductOfferingReferences": [
+        {
+          "ProductOfferingId": "f5c8f735-a8a2-4765-b3cc-fbf6b7365a24",
+          "ProductOfferingPriceId": "a5255c3503d47e2005153f7e781adac8",
+          "ProductId": null,
+          "ApopId": null
+        }
+      ]
+    },
+    "ExternalPaidAmount": null,
+    "PaymentMethod": null,
+    "TransactionId": "1178401530",
+    "TraceInterfaceName": null
+  }
+}
+2019-02-14T16:27:27.767+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "GlobalTablesActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "0", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "GlobalTablesActivity",
+  "Methods": [
+    {
+      "Name": "fetchUomFromCoba",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "fetchCurrencyDataFromCoba",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.912+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AsyncGetCustomerDataActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "AsyncGetCustomerDataActivity",
+  "Methods": [
+    {
+      "Name": "firstAsyncCall",
+      "Info": [
+        "Customer data not read yet, fetching it"
+      ],
+      "ReturnValue": "ASYNC THEN 'NEXT'"
+    },
+    {
+      "Name": "firstAsyncResponse",
+      "Info": [
+        {},
+        "Creating TimelinesView"
+      ],
+      "ReturnValue": "ASYNC THEN 'NEXT'"
+    },
+    {
+      "Name": "secondAsyncResponse",
+      "Info": [
+        {},
+        "Customer Timelines added to data container"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.912+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ProviderHandlerActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "ProviderHandlerActivity",
+  "Methods": [
+    {
+      "Name": "initializeProviderHandler",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.913+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AssetFactoryActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "AssetFactoryActivity",
+  "Methods": [
+    {
+      "Name": "initializeAssetFactory",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.916+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "RecurringActionActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "RecurringActionActivity",
+  "Methods": [
+    {
+      "Name": "determineDueDates",
+      "Info": [
+        "Using Strategy = DefaultStrategy (evaluates recurrence if product.status = ProductActive)",
+        "Using the default home time zone: Europe/Berlin",
+        "Contract = 8388CB6B392F4B12B3D57F1FE459171B has no calendars",
+        "------------------------------------------------------------",
+        "No due dates found"
+      ],
+      "ReturnValue": "NO_RECURRING_ACTION_PERFORMED"
+    }
+  ]
+}
+2019-02-14T16:27:27.916+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "SetRecurrenceCodeActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "SetRecurrenceCodeActivity",
+  "Methods": [
+    {
+      "Name": "setRecurrenceResultCode",
+      "Info": [
+        "RecurrenceEvaluationResponse: CLEAN"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.917+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "FinishRecurrenceEvaluationActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "RecurrenceEvaluationPreFlow",
+  "Activity": "FinishRecurrenceEvaluationActivity",
+  "Methods": [
+    {
+      "Name": "sendResponse",
+      "Info": [
+        {
+          "!! Response": {
+            "Flow result code": "SUCCESS",
+            "Optional message": {
+              "Code": "CLEAN"
+            }
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.918+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AdminChargeRequestImpl", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "0", "ContentType": "TEXT"}/=SLM
+{
+  "RequestData": {
+    "TimeoutNs": 10722193049577349,
+    "RuntimeflowName": "AdminCharge_Reserve",
+    "CommunicationId": null,
+    "TriggerTime": "2019-02-14T16:27:24.442+01:00",
+    "ServiceContextId": {
+      "ServiceContextId": "Standard-PurchaseCharge",
+      "ExternalServiceId": "purchasecharge"
+    },
+    "CustomerId": "326B513AB384427C8D703C9A867661C2",
+    "SegmentId": "{\"DistributedSegmentId\": {\"id\":\"cha4\"}}",
+    "ContractId": "8388CB6B392F4B12B3D57F1FE459171B",
+    "DuplicateDetectionId": "DuplicateDetectionId2",
+    "DynamicDataRecord": [],
+    "TraceIdentifier": null,
+    "FunctionControlStatus": "{c0000001=false, c0000002=false, c0000003=false, c0000004=false, c0000005=false, c0000006=false, c0000007=false, c0000008=false, c0000009=false, c0000010=true, c0000011=false, c0000012=true, c0000013=false, c0000014=false, c0000018=true, c0000019=false, c0000020=false, c0000021=false, c0000022=false, c0000023=false, c0000024=false, c0000025=false, c0000026=false, c0000027=false, c0000028=false, c0000029=false, c0000030=false, c0000031=false, c0000032=false, c0000033=false, c0000034=false, c0000035=false, c0000036=false, c0000037=false, c0000038=false, c0000039=false, c0000040=false, c0000041=false, c0000042=false, c0000043=false, c0000044=false, c0000045=false, c0000046=true, c0000047=false, c0000048=false, c0000049=false, c0000050=false, c0000051=false, c0000052=false, c0000053=false, c0000054=false, c0000055=false, c0000056=false, c0000057=false, c0000058=false, c0000059=false, c0000060=false, c0000061=false, c0000062=false, c0000064=false, c0000066=false, c0000067=false, c0000068=false, c0000069=false, c0000070=false, c0000071=false, c0000072=false, c0000073=false, c0000074=false, c0000075=false, c0000076=false, c0000077=false, c0000078=false, c0000079=false, c0000080=false, c0000081=false, c0000082=false, c0000083=false, c0000084=false, c0000085=false, c0000086=false, c0000087=false, c0000088=false, c0000089=false, c0000090=false, c0000091=false, c0000092=false, c0000093=false, c0000094=false, p0000001=false}",
+    "PartitionId": "1",
+    "ReservationId": "281f2e6d-70f2-4318-babb-e8d53b0d064f",
+    "ReferenceData": [],
+    "BasketProductOfferingData": {
+      "ProductOfferingReferences": [
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        },
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        },
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        },
+        {
+          "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+          "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+          "ProductId": null,
+          "ApopId": null
+        }
+      ],
+      "PurchaseDiscountProductOfferingReferences": [
+        {
+          "ProductOfferingId": "f5c8f735-a8a2-4765-b3cc-fbf6b7365a24",
+          "ProductOfferingPriceId": "a5255c3503d47e2005153f7e781adac8",
+          "ProductId": null,
+          "ApopId": null
+        }
+      ]
+    },
+    "ExternalPaidAmount": null,
+    "PaymentMethod": null,
+    "TransactionId": "1178401530",
+    "TraceInterfaceName": null
+  }
+}
+2019-02-14T16:27:27.935+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "GlobalTablesActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "0", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "GlobalTablesActivity",
+  "Methods": [
+    {
+      "Name": "fetchUomFromCoba",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "fetchCurrencyDataFromCoba",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.936+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AsyncGetCustomerDataActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "AsyncGetCustomerDataActivity",
+  "Methods": [
+    {
+      "Name": "firstAsyncCall",
+      "Info": [
+        "A TimelinesView already exists, continuing to the next activity"
+      ],
+      "ReturnValue": "NEXT ACTIVITY"
+    }
+  ]
+}
+2019-02-14T16:27:27.936+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ProviderHandlerActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ProviderHandlerActivity",
+  "Methods": [
+    {
+      "Name": "initializeProviderHandler",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.937+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "BucketManagementPrepareActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "BucketManagementPrepareActivity",
+  "Methods": [
+    {
+      "Name": "prepareBucketManagement",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.937+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AssetFactoryActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "AssetFactoryActivity",
+  "Methods": [
+    {
+      "Name": "initializeAssetFactory",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.938+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ProductStatusActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ProductStatusActivity",
+  "Methods": [
+    {
+      "Name": "step1FetchData",
+      "Info": [
+        "FETCH_DATA"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step2RemoveUnusedReserveActiveProducts",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step3UpdateUsedAndReservedActiveProducts",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.939+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ChargingServiceDeterminationActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ChargingServiceDeterminationActivity",
+  "Methods": [
+    {
+      "Name": "determineChargingServiceId",
+      "Info": [
+        "Determining charging service for context: Standard-PurchaseCharge",
+        "Rule:
+TreeRule[
+RuleContract[
+    DataDefinitionRepositoryWrapper[
+    DataDefinitionRepository[isLocal=false, dataDefinitions=[
+        {key=DynamicParameter, value=DataDefinition[name=DynamicParameter, dataType=Object, collectionType=None, provider=DynamicRequestDataProvider]}
+        {key=StaticParameter, value=DataDefinition[name=StaticParameter, dataType=Object, collectionType=None, provider=StaticRequestDataProvider]}
+        {key=ChargingServicesList, value=DataDefinition[name=ChargingServicesList, dataType=String, collectionType=List]}
+        {key=ChargingServiceId, value=DataDefinition[name=ChargingServiceId, dataType=String, collectionType=None]}]]
+    DataDefinitionRepository[isLocal=true, dataDefinitions=[
+        {key=useSensitiveData, value=DataDefinition[name=useSensitiveData, dataType=String, collectionType=None, provider=DynamicRequestDataProvider, keys=[\"useSensitiveData\"]]}]]]]
+Node[name=Charging Service Determination, children=[
+    Node[name=unnamed, children=[
+        Modifier[name=Add PurchaseChargeWithSensitiveData]
+        Modifier[name=Add PurchaseCharge]]]
+    Node[name=PurchaseChargeWithSensitiveData, children=[
+        Condition[name=Groups, children=[
+            Condition[name=Conditions, children=[
+                Condition[name=Data should exist, children=[
+                    Condition[name=Does useSensitiveData (String) exist]]]]]]]
+        Modifier[name=SetData]
+        Modifier[name=Done, exiting]]]
+    Node[name=PurchaseCharge, children=[
+        Modifier[name=SetData]
+        Modifier[name=Done, exiting]]]]]
+]",
+        "
++-- Charging Service Determination
+    +-- unnamed
+    |   !-- Add PurchaseChargeWithSensitiveData
+    |   |     Add \"PurchaseChargeWithSensitiveData\" to collection ChargingServicesList
+    |   !-- Add PurchaseCharge
+    |         Add \"PurchaseCharge\" to collection ChargingServicesList
+    +-- PurchaseChargeWithSensitiveData
+    |   ?-- OR (Groups) [FALSE]
+    |       ?-- AND (Conditions) [FALSE]
+    |           ?-- AND (Data should exist) [FALSE]
+    |               ?-- Does useSensitiveData (String) exist [FALSE]
+    |                     Check for useSensitiveData[\"useSensitiveData\"] existence
+    +-- PurchaseCharge
+        !-- SetData
+        |     ChargingServiceId = \"PurchaseCharge\"
+        !-- Done, exiting [EXIT]
+              Execution interrupted
+",
+        "Determined charging service with Id: PurchaseCharge"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.954+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ChargingServiceEnrichmentActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ChargingServiceEnrichmentActivity",
+  "Methods": [
+    {
+      "Name": "readFromDataContainer",
+      "Info": [
+        "Fetch charging service determination result."
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "getChargingServiceEnrichments",
+      "Info": [
+        "Fetch enrichment functions from charging service: PurchaseCharge"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "performChargingServiceEnrichment",
+      "Info": [
+        "Handling: NormalizeStringParameter",
+        "Performing enrichment with dynamic function: 'NormalizeStringParameter' for Charging Service with Id: 'PurchaseCharge'",
+        "Input parameter: parameterIn, Location: DynamicRequestData [PointOfSales]",
+        "Rule:
+TreeRule[
+RuleContract[
+    DataDefinitionRepositoryWrapper[
+    DataDefinitionRepository[isLocal=false, dataDefinitions=[
+        {key=OutputParameter, value=DataDefinition[name=OutputParameter, dataType=Object, collectionType=None, provider=OutputParameter]}
+        {key=FunctionTemp, value=DataDefinition[name=FunctionTemp, dataType=Object, collectionType=Map, provider=FunctionTemp]}
+        {key=InputParameter, value=DataDefinition[name=InputParameter, dataType=Object, collectionType=None, provider=InputParameter]}]]
+    DataDefinitionRepository[isLocal=true, dataDefinitions=[
+        {key=parameterOut, value=DataDefinition[name=parameterOut, dataType=String, collectionType=None, provider=OutputParameter, keys=[\"parameterOut\"]]}
+        {key=parameterIn, value=DataDefinition[name=parameterIn, dataType=String, collectionType=None, provider=InputParameter, keys=[\"parameterIn\"]]}]]]]
+Node[name=Set normalized parameters, children=[
+    Condition[name=ParameterInExist]
+    Modifier[name=SetParameter]]]
+]",
+        "
++-- Set normalized parameters
+    ?-- ParameterInExist [FALSE]
+          Check for parameterIn[\"parameterIn\"] existence
+"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "saveResults",
+      "Info": [
+        "Enrichment functions generated no normalized event specification output.",
+        "No ResourceFacingServiceView was found for charging service with id PurchaseCharge."
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.962+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "BasicSessionSetupActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "BasicSessionSetupActivity",
+  "Methods": [
+    {
+      "Name": "fetchData",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "setUpSession",
+      "Info": [
+        {
+          "Added basic session container:": {
+            "SessionId": "281f2e6d-70f2-4318-babb-e8d53b0d064f",
+            "ExpirationTime": 1550158167954
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:27.963+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ProductSelectionForAdminChargeActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ProductSelectionForAdminChargeActivity",
+  "Methods": [
+    {
+      "Name": "createProductSelectionFactory",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:28.861+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AdminChargeReserveActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "AdminChargeReserveActivity",
+  "Methods": [
+    {
+      "Name": "initialize",
+      "Info": [
+        "Reset fetched consumers",
+        "Initializing providerHandler with:",
+        {
+          "Customer": "326B513AB384427C8D703C9A867661C2",
+          "Contract": null,
+          "PriceType": "ONE_TIME",
+          "Timestamp": "2019-02-14T16:27:24.442+01:00"
+        },
+        {
+          "Prioritizing products using BasketProductOfferings": {
+            "basketProductOfferings": {
+              "ProductOfferingReferences": [
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                },
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                },
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                },
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                }
+              ],
+              "PurchaseDiscountProductOfferingReferences": [
+                {
+                  "ProductOfferingId": "f5c8f735-a8a2-4765-b3cc-fbf6b7365a24",
+                  "ProductOfferingPriceId": "a5255c3503d47e2005153f7e781adac8",
+                  "ProductId": null,
+                  "ApopId": null
+                }
+              ]
+            }
+          }
+        },
+        {
+          "Product without Product id. Product will be searched using": {
+            "productOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "productOfferingPriceId": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Product found with": {
+            "product id": null,
+            "product offering id": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "product offering price id": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Product without Product id. Product will be searched using": {
+            "productOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "productOfferingPriceId": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Product found with": {
+            "product id": null,
+            "product offering id": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "product offering price id": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Product without Product id. Product will be searched using": {
+            "productOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "productOfferingPriceId": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Product found with": {
+            "product id": null,
+            "product offering id": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "product offering price id": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Product without Product id. Product will be searched using": {
+            "productOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "productOfferingPriceId": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Product found with": {
+            "product id": null,
+            "product offering id": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+            "product offering price id": "c6c5135469dc867f70462c5dca978209"
+          }
+        },
+        {
+          "Final selected products": {
+            "Products selected up front": [
+              "AdminChargesProductImpl
+		{
+		    ProductId = BE2E284292C542D98E55F5B80478006C
+		    ProductOfferingPriceId = c6c5135469dc867f70462c5dca978209
+		}",
+              "AdminChargesProductImpl
+		{
+		    ProductId = C83974B557714ECBB3B663DB0C17D441
+		    ProductOfferingPriceId = c6c5135469dc867f70462c5dca978209
+		}",
+              "AdminChargesProductImpl
+		{
+		    ProductId = 60156A83B5BD4135BFD69689DCBB5194
+		    ProductOfferingPriceId = c6c5135469dc867f70462c5dca978209
+		}",
+              "AdminChargesProductImpl
+		{
+		    ProductId = 6EB3C30B3B084A2F915233BC955B7A77
+		    ProductOfferingPriceId = c6c5135469dc867f70462c5dca978209
+		}"
+            ]
+          }
+        },
+        {
+          "Prioritizing products using BasketProductOfferings": {
+            "basketProductOfferings": {
+              "ProductOfferingReferences": [
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                },
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                },
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                },
+                {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferingPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductId": null,
+                  "ApopId": null
+                }
+              ],
+              "PurchaseDiscountProductOfferingReferences": [
+                {
+                  "ProductOfferingId": "f5c8f735-a8a2-4765-b3cc-fbf6b7365a24",
+                  "ProductOfferingPriceId": "a5255c3503d47e2005153f7e781adac8",
+                  "ProductId": null,
+                  "ApopId": null
+                }
+              ]
+            }
+          }
+        },
+        {
+          "Product without Product id. Product will be searched using": {
+            "productOfferingId": "f5c8f735-a8a2-4765-b3cc-fbf6b7365a24",
+            "productOfferingPriceId": "a5255c3503d47e2005153f7e781adac8"
+          }
+        },
+        {
+          "Product found with": {
+            "product id": null,
+            "product offering id": "f5c8f735-a8a2-4765-b3cc-fbf6b7365a24",
+            "product offering price id": "a5255c3503d47e2005153f7e781adac8"
+          }
+        },
+        {
+          "Final selected products": {
+            "Products selected up front": [
+              "AdminChargesProductImpl
+		{
+		    ProductId = 928BA2569E114387BD942FDCEDDD9BC9
+		    ProductOfferingPriceId = a5255c3503d47e2005153f7e781adac8
+		}"
+            ]
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "reserve",
+      "Info": [
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeBaseProducts(AbstractAdminChargeStrategy.java:258)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:171)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 19, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 1000.000000 usd and soft available: null",
+        "ActionId = 19 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 1000.000000, available units would now be 990.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "19",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=19=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@4e0283d}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 19,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeBaseProducts(AbstractAdminChargeStrategy.java:258)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:171)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 21, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 990.000000 usd and soft available: null",
+        "ActionId = 21 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 990.000000, available units would now be 980.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "21",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=21=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@410c3637}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 21,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeBaseProducts(AbstractAdminChargeStrategy.java:258)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:171)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 23, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 980.000000 usd and soft available: null",
+        "ActionId = 23 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 980.000000, available units would now be 970.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "23",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=23=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@2c041025}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 23,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeBaseProducts(AbstractAdminChargeStrategy.java:258)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:171)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 25, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 970.000000 usd and soft available: null",
+        "ActionId = 25 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 970.000000, available units would now be 960.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "25",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=25=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@24bbef4e}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 25,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "APOP: AtomicProductOfferingPrice-fbd470b2d46914186936e0cf7e694f50 (fbd470b2d46914186936e0cf7e694f50)",
+        "
++-- Absolute Data Joy strategy
+    +-- Absolute discount
+        !-- Set absolute linear discount
+",
+        "Created ABSOLUTElinear discount action from rule: , ExecutedActionOneTimeAbsoluteLinearDiscountModifier, ActionId: ActionId=26, Value: 5, UnitOfMeasurement: usd, DiscountType: ABSOLUTE, Target: PROMOTION_FOR, Interval: {\"Value\":3,\"Uom\":\"quantity\"}, MaxNumberOfTargets: {\"Value\":1,\"Uom\":\"quantity\"}, AssetForProductCounter: null, AssetForDiscountCounter: null, TaggedEventRecordValues: {\"GLCode\":null,\"PriceTaxClass\":null,\"PricingActionType\":null,\"PricingActionId\":null,\"AmountType\":null}",
+        {
+          "RaceResult after execute rule": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": false,
+            "ActionResultPacks": {},
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": null,
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "fbd470b2d46914186936e0cf7e694f50",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-fbd470b2d46914186936e0cf7e694f50",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": []
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": {
+                  "Value": 5,
+                  "UnitOfMeasurement": "usd",
+                  "DiscountType": "ABSOLUTE",
+                  "ActionId": "26",
+                  "ExecutedAction": "OneTimeAbsoluteLinearDiscountModifier",
+                  "DiscountAction": "SetAbsoluteDiscount",
+                  "Target": "PROMOTION_FOR",
+                  "Interval": "3.000000 quantity",
+                  "MaxNumberOfTargets": "1.000000 quantity",
+                  "AssetForProductCounter": null ,
+                  "AssetForDiscountCounter": null,
+                  "TaggedEventRecordValues": {}
+                },
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "Trying to find next prioritized SharingConsumer: ",
+        "No SharingConsumer could be found.",
+        "Number of base products eligible for discount: 0",
+        "Purchase qualified for discount but discount could not be distributed as no product in the basket has a discountFor relationship from the price modification product",
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRemainingBaseProductsAfterAppliedDiscounts(AbstractAdminChargeStrategy.java:277)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:207)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 28, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 1000.000000 usd and soft available: null",
+        "ActionId = 28 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 1000.000000, available units would now be 990.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "28",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=28=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@4833cfa0}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 28,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRemainingBaseProductsAfterAppliedDiscounts(AbstractAdminChargeStrategy.java:277)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:207)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 30, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 990.000000 usd and soft available: null",
+        "ActionId = 30 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 990.000000, available units would now be 980.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "30",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=30=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@2561cb18}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 30,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRemainingBaseProductsAfterAppliedDiscounts(AbstractAdminChargeStrategy.java:277)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:207)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 32, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 980.000000 usd and soft available: null",
+        "ActionId = 32 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 980.000000, available units would now be 970.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "32",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=32=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@67958d0b}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 32,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "APOP: AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac (e6116d30ec2bd45b28739214a1dedfac)",
+        "
++-- Purchase fee EUN
+    +-- Pay fee with EUN
+        !-- Payment from BAB
+        !-- Send end-user notification
+              Warning, notification category not set.
+              Adding NotificationCreator to PostActions: {\"PartialNotificationResult\":{\"NotificationTemplateId\":\"172353\",\"ProductId\":null,\"ProductBucketId\":null,\"BillingAccountId\":null,\"BillingAccountBucketId\":null,\"BillingAccountBucketSpecId\":null}}
+              com.ericsson.bss.vre.core.treerule.TreeExecutionException: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:64)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeElement(TreeTraverser.java:195)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeNode(TreeTraverser.java:109)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:74)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	at com.ericsson.bss.vre.core.treerule.TracingTreeExecutionProxy.execute(TracingTreeExecutionProxy.java:67)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.traverseElement(TreeTraverser.java:43)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.runRule(TreeRule.java:175)
+  	at com.ericsson.bss.vre.core.treerule.TreeRule.apply(TreeRule.java:103)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.ApopUtils.runRuleFor(ApopUtils.java:74)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.AdminChargeRuleRunner.runRule(AdminChargeRuleRunner.java:62)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.runRules(AdminChargeRace.java:136)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.AdminChargeRace.executeAll(AdminChargeRace.java:84)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.productExecuteAll(AbstractAdminChargeStrategy.java:293)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRemainingBaseProductsAfterAppliedDiscounts(AbstractAdminChargeStrategy.java:277)
+  	at com.ericsson.bss.rm.charging.service.admincharge.adminchargelogic.AbstractAdminChargeStrategy.executeRace(AbstractAdminChargeStrategy.java:207)
+  	at com.ericsson.bss.rm.charging.service.admincharge.activity.AdminChargeReserveActivity.reserve(AdminChargeReserveActivity.java:45)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  	at java.lang.reflect.Method.invoke(Method.java:498)
+  	at com.ericsson.bss.rm.charging.rf.core.engine.internal.ExecutionObjectImpl.run(ExecutionObjectImpl.java:254)
+  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  	at java.lang.Thread.run(Thread.java:748)
+  Caused by: java.lang.ClassCastException: com.ericsson.bss.rm.charging.vre.tree.elements.triggers.NotificationCreator cannot be cast to com.ericsson.bss.rm.charging.vre.tree.elements.triggers.ExternalNotificationCreator
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.api.DefaultPostActionFromRule.<init>(DefaultPostActionFromRule.java:41)
+  	at com.ericsson.bss.rm.charging.race.engine.PostActionFromRule$PostActionFromRuleBuilder.build(PostActionFromRule.java:42)
+  	at com.ericsson.bss.rm.charging.race.engine.internal.rulerunner.impl.RaceDataSet.addPostAction(RaceDataSet.java:92)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.NotificationModifier.executeInternal(NotificationModifier.java:154)
+  	at com.ericsson.bss.rm.charging.vre.tree.elements.modifier.OptionalTreeModifier.execute(OptionalTreeModifier.java:65)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.executeTreeElement(TreeTraverser.java:79)
+  	at com.ericsson.bss.vre.core.treerule.TreeTraverser.execute(TreeTraverser.java:56)
+  	... 32 more
+",
+        "No rule found for Billing Account 6260FA8AF7E94CFAA233762A42A72A8B with bucket id CF8AF6AD9D854E57A467E8286F2D60D6",
+        "Creating  BillingAccountAsset Using Default Data Model:",
+        {
+          "CPOP": "c6c5135469dc867f70462c5dca978209",
+          "APOP": "e6116d30ec2bd45b28739214a1dedfac",
+          "BillingAccount": "6260FA8AF7E94CFAA233762A42A72A8B",
+          "BillingAccountBuckets": [
+            {
+              "BillingAccountId": null,
+              "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6"
+            }
+          ]
+        },
+        "Created Fee, ActionId: 34, Price: 10 usd, AssetId: 6260FA8AF7E94CFAA233762A42A72A8B",
+        "Before rate: bucket balance for AssetId[6260FA8AF7E94CFAA233762A42A72A8B] is hard available: 970.000000 usd and soft available: null",
+        "ActionId = 34 : Total Fee: 10.000000 usd could be afforded",
+        "All fees could be afforded",
+        "Created bucket change of 10.000000 for ASSET_BILLING_ACCOUNT, available units considering reservations were 970.000000, available units would now be 960.000000",
+        {
+          "RaceResult after execute all": {
+            "ChargingIntervalPack": null,
+            "AreSessionSetupFeesCharged": false,
+            "AreSessionStartFeesCharged": true,
+            "ActionResultPacks": {
+              "SessionStartFeeActionResultPack": {
+                "ActionResults": [
+                  {
+                    "ExecutedAction": "Fee",
+                    "RatedUnits": "no rated units",
+                    "ChargedUnits": "no charged units",
+                    "Cost": "Cost [myBaseCost={\"Value\":10,\"Uom\":\"usd\"}, myDiscountedCost={\"Value\":10,\"Uom\":\"usd\"}]",
+                    "NumberOfChargingIntervals": null,
+                    "DiscountAction": null,
+                    "IsAccumulator": false,
+                    "PriceRatingResult": {
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ActionId": "34",
+                      "PriceRatingResult": "ALL",
+                      "RatingResultReason": "NO_SPECIFIC_REASON"
+                    }
+                  }
+                ]
+              }
+            },
+            "RatedUnits": "[]",
+            "ChargedUnits": "null",
+            "ResultCode": "SUCCESS",
+            "RatingResultReason": "NO_SPECIFIC_REASON",
+            "TimeSwitchResult": "has not hit any switch time",
+            "FreeResult": null,
+            "ChargingResult": null,
+            "ApplyingResult": "DefaultApplyingResult [myAssetResults={ActionId=34=com.ericsson.bss.rm.charging.race.engine.internal.applying.impl.DefaultAssetResult@5c8edff2}]",
+            "RuleRunnerResult": {
+              "Apop": {
+                "priceId": "e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceId": null,
+                "name": "AtomicProductOfferingPrice-e6116d30ec2bd45b28739214a1dedfac",
+                "productPriceExternalId": null
+              },
+              "ActionPack": {
+                "SessionSetupFeePack": {
+                  "PriceActions": []
+                },
+                "FixedPricePack": {
+                  "PriceActions": [
+                    {
+                      "Price": "10.000000 usd",
+                      "AssetId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "ImplicitBucket": null,
+                      "PriceActionType": "PRICE",
+                      "RuleActionTag": {
+                        "PricingActionType": "PurchasePrice",
+                        "PricingActionId": "be6d2e16a5ee57f893cff92e160c5691",
+                        "AmountType": "GROSS"
+                      },
+                      "ProductType": null,
+                      "ActionId": 34,
+                      "ExecutedAction": "Fee"
+                    }
+                  ]
+                },
+                "LinearPricePack=": {
+                  "PriceActions": []
+                },
+                "FixedDiscount=": null,
+                "LinearDiscount=": null,
+                "SessionSetupFeeDiscount=": null,
+                "AdminChargeDiscount=": null,
+                "ChargingIntervalPack=": {
+                  "ChargingIntervals": []
+                },
+                "BucketOperationPack=": {
+                  "BucketOperationActions": []
+                },
+                "NotificationPack=": {
+                  "NotificationActions": []
+                },
+                "PostActionPack=": {
+                  "PostActions": []
+                }
+              },
+              "AssetVreIdLimitPack": {
+                "AssetConditions": {},
+                "AvailableUnitsConditions": {}
+              },
+              "AssetIdLimitPack": {
+                "AssetLimits": {},
+                "AvailableUnitsAssetLimits": {}
+              },
+              "IsApopTriggered": true,
+              "IsCpopFound": true,
+              "OtherPartyId": null,
+              "RuleRunnerExitReason": null
+            }
+          }
+        },
+        "***************************Context: RESERVE******************************************",
+        "***************************Base prices*********************************************************",
+        "Product id: BE2E284292C542D98E55F5B80478006C, base cost: 10.000000 usd ",
+        "Product id: 60156A83B5BD4135BFD69689DCBB5194, base cost: 10.000000 usd ",
+        "Product id: 6EB3C30B3B084A2F915233BC955B7A77, base cost: 10.000000 usd ",
+        "Product id: C83974B557714ECBB3B663DB0C17D441, base cost: 10.000000 usd ",
+        "***************************Discounted prices***************************************************"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:28.924+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AssetChangesReserveActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "AssetChangesReserveActivity",
+  "Methods": [
+    {
+      "Name": "submitBucketReservations",
+      "Info": [
+        "Applying changes:",
+        {
+          "Action": "Reserve",
+          "Transactions": [
+            {
+              "TransactionId": "5",
+              "BucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+              "SpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BucketType": "ACCOUNT (BILLING_ACCOUNT_BUCKET)",
+              "SharingScope": "CONTRACT_INTERNAL",
+              "TransactionType": "RESERVATION",
+              "Timestamp": "2019-02-14T16:27:24+01:00",
+              "OriginalChange": "Operation: SUBTRACT Value: 10.000000",
+              "BalanceBefore": "1000.000000 (1000.000000)",
+              "BalanceAfter": "1000.000000 (990.000000)",
+              "UnitOfMeasurement": "usd",
+              "ValueContainerChanges": [
+                {
+                  "ValueContainerId": "5",
+                  "ValueContainerValue": "10.000000",
+                  "OperationValueContainer": "NEW",
+                  "ValueContainerType": "RESERVATION",
+                  "Validity": {
+                    "StartTime": "2019-02-14T16:27:24+01:00",
+                    "EndTime": "9999-12-31T12:00:00.001+00:00"
+                  }
+                }
+              ],
+              "BucketConditions": [
+                {
+                  "OperatorType": "GREATER_THAN_OR_EQUAL_TO",
+                  "Limit": "0.000000",
+                  "Phase": "POST"
+                },
+                {
+                  "OperatorType": "LESS_THAN_OR_EQUAL_TO",
+                  "Limit": "2147483647.000000",
+                  "Phase": "POST"
+                }
+              ]
+            },
+            {
+              "TransactionId": "6",
+              "BucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+              "SpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BucketType": "ACCOUNT (BILLING_ACCOUNT_BUCKET)",
+              "SharingScope": "CONTRACT_INTERNAL",
+              "TransactionType": "RESERVATION",
+              "Timestamp": "2019-02-14T16:27:24+01:00",
+              "OriginalChange": "Operation: SUBTRACT Value: 10.000000",
+              "BalanceBefore": "1000.000000 (990.000000)",
+              "BalanceAfter": "1000.000000 (980.000000)",
+              "UnitOfMeasurement": "usd",
+              "ValueContainerChanges": [
+                {
+                  "ValueContainerId": "6",
+                  "ValueContainerValue": "10.000000",
+                  "OperationValueContainer": "NEW",
+                  "ValueContainerType": "RESERVATION",
+                  "Validity": {
+                    "StartTime": "2019-02-14T16:27:24+01:00",
+                    "EndTime": "9999-12-31T12:00:00.001+00:00"
+                  }
+                }
+              ],
+              "BucketConditions": [
+                {
+                  "OperatorType": "GREATER_THAN_OR_EQUAL_TO",
+                  "Limit": "0.000000",
+                  "Phase": "POST"
+                },
+                {
+                  "OperatorType": "LESS_THAN_OR_EQUAL_TO",
+                  "Limit": "2147483647.000000",
+                  "Phase": "POST"
+                }
+              ]
+            },
+            {
+              "TransactionId": "7",
+              "BucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+              "SpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BucketType": "ACCOUNT (BILLING_ACCOUNT_BUCKET)",
+              "SharingScope": "CONTRACT_INTERNAL",
+              "TransactionType": "RESERVATION",
+              "Timestamp": "2019-02-14T16:27:24+01:00",
+              "OriginalChange": "Operation: SUBTRACT Value: 10.000000",
+              "BalanceBefore": "1000.000000 (980.000000)",
+              "BalanceAfter": "1000.000000 (970.000000)",
+              "UnitOfMeasurement": "usd",
+              "ValueContainerChanges": [
+                {
+                  "ValueContainerId": "7",
+                  "ValueContainerValue": "10.000000",
+                  "OperationValueContainer": "NEW",
+                  "ValueContainerType": "RESERVATION",
+                  "Validity": {
+                    "StartTime": "2019-02-14T16:27:24+01:00",
+                    "EndTime": "9999-12-31T12:00:00.001+00:00"
+                  }
+                }
+              ],
+              "BucketConditions": [
+                {
+                  "OperatorType": "GREATER_THAN_OR_EQUAL_TO",
+                  "Limit": "0.000000",
+                  "Phase": "POST"
+                },
+                {
+                  "OperatorType": "LESS_THAN_OR_EQUAL_TO",
+                  "Limit": "2147483647.000000",
+                  "Phase": "POST"
+                }
+              ]
+            },
+            {
+              "TransactionId": "8",
+              "BucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+              "SpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+              "BucketType": "ACCOUNT (BILLING_ACCOUNT_BUCKET)",
+              "SharingScope": "CONTRACT_INTERNAL",
+              "TransactionType": "RESERVATION",
+              "Timestamp": "2019-02-14T16:27:24+01:00",
+              "OriginalChange": "Operation: SUBTRACT Value: 10.000000",
+              "BalanceBefore": "1000.000000 (970.000000)",
+              "BalanceAfter": "1000.000000 (960.000000)",
+              "UnitOfMeasurement": "usd",
+              "ValueContainerChanges": [
+                {
+                  "ValueContainerId": "8",
+                  "ValueContainerValue": "10.000000",
+                  "OperationValueContainer": "NEW",
+                  "ValueContainerType": "RESERVATION",
+                  "Validity": {
+                    "StartTime": "2019-02-14T16:27:24+01:00",
+                    "EndTime": "9999-12-31T12:00:00.001+00:00"
+                  }
+                }
+              ],
+              "BucketConditions": [
+                {
+                  "OperatorType": "GREATER_THAN_OR_EQUAL_TO",
+                  "Limit": "0.000000",
+                  "Phase": "POST"
+                },
+                {
+                  "OperatorType": "LESS_THAN_OR_EQUAL_TO",
+                  "Limit": "2147483647.000000",
+                  "Phase": "POST"
+                }
+              ]
+            }
+          ]
+        },
+        "Reset fetched consumers"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:28.975+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ScenarioExecutionActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ScenarioExecutionActivity",
+  "Methods": [
+    {
+      "Name": "getData",
+      "Info": [
+        "No scenarios was triggered, skipping activity..."
+      ],
+      "ReturnValue": "NEXT ACTIVITY"
+    }
+  ]
+}
+2019-02-14T16:27:29.002+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "CharacteristicValueProposalActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "CharacteristicValueProposalActivity",
+  "Methods": [
+    {
+      "Name": "step1FetchData",
+      "Info": [
+        "FETCH_DATA"
+      ],
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step2CollectCharacteristicValueUpdates",
+      "Info": null,
+      "ReturnValue": "NEXT"
+    },
+    {
+      "Name": "step3CreateCharacteristicValueUpdateResult",
+      "Info": [
+        {
+          "CharacteristicValueUpdateResult": {
+            "CharacteristicValueNotificationProposal": []
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.013+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "MultipleEventActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "MultipleEventActivity",
+  "Methods": [
+    {
+      "Name": "run",
+      "Info": [
+        {
+          "Selected schema": "com.ericsson.bss.cha.event.schema.CharacteristicValueUpdateNotificationEvent.1.0.0",
+          "Because the following conditions was true": [
+            "c0000087 is not active"
+          ]
+        },
+        "Preparing generation of event: com.ericsson.bss.cha.event.schema.CharacteristicValueUpdateNotificationEvent.1.0.0"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.013+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "MultipleEventActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "MultipleEventActivity",
+  "Methods": [
+    {
+      "Name": "run",
+      "Info": [
+        {
+          "Selected schema": "com.ericsson.bss.cha.event.schema.ProductStatusNotificationEvent.3.5.0",
+          "Because the following conditions was true": [
+            "c0000085 is not active"
+          ]
+        },
+        "Preparing generation of event: com.ericsson.bss.cha.event.schema.ProductStatusNotificationEvent.3.5.0"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.026+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "EventRecordActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "EventRecordActivity",
+  "Methods": [
+    {
+      "Name": "createEventData",
+      "Info": [
+        {
+          "Adding event generator because condition was true": "Always process"
+        },
+        "Adding DefaultNotificationGenerator because none of c0000011, c0000050 or c0000051 was active"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.202+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ResponseDataCreatorActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ResponseDataCreatorActivity",
+  "Methods": [
+    {
+      "Name": "setResponseData",
+      "Info": [
+        {
+          "AdminChargeResponse": {
+            "ResponseCode": 1000,
+            "ReservationId": "281f2e6d-70f2-4318-babb-e8d53b0d064f",
+            "BasketPriceReferences": [
+              {
+                "ProductReference": {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferringPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductOfferingBasePrice": {
+                    "Value": {
+                      "Numerator": 10000000,
+                      "DenominatorExponent": 6
+                    },
+                    "UnitOfMeasurement": "usd"
+                  },
+                  "ProductOfferingDiscountPrice": null,
+                  "PriceFromExternalMoney": null
+                },
+                "PriceResult": {
+                  "PricingActionId": "e6116d30ec2bd45b28739214a1dedfac",
+                  "ResultCode": 3,
+                  "PricingActionType": null,
+                  "PricingActionName": null,
+                  "TaxClass": null,
+                  "AmountType": null,
+                  "ProductBucketChanges": [],
+                  "BillingAccountBucketChanges": [
+                    {
+                      "BillingAccountId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "BillingAccountSpecificationId": "4da18271-7af5-4990-9f2b-aeef5ad05521",
+                      "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+                      "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+                      "BalanceChange": {
+                        "Value": {
+                          "Numerator": 10000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      },
+                      "AccountOperation": "SUBTRACT",
+                      "BalanceAfter": {
+                        "Value": {
+                          "Numerator": 990000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "ProductReference": {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferringPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductOfferingBasePrice": {
+                    "Value": {
+                      "Numerator": 10000000,
+                      "DenominatorExponent": 6
+                    },
+                    "UnitOfMeasurement": "usd"
+                  },
+                  "ProductOfferingDiscountPrice": null,
+                  "PriceFromExternalMoney": null
+                },
+                "PriceResult": {
+                  "PricingActionId": "e6116d30ec2bd45b28739214a1dedfac",
+                  "ResultCode": 3,
+                  "PricingActionType": null,
+                  "PricingActionName": null,
+                  "TaxClass": null,
+                  "AmountType": null,
+                  "ProductBucketChanges": [],
+                  "BillingAccountBucketChanges": [
+                    {
+                      "BillingAccountId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "BillingAccountSpecificationId": "4da18271-7af5-4990-9f2b-aeef5ad05521",
+                      "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+                      "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+                      "BalanceChange": {
+                        "Value": {
+                          "Numerator": 10000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      },
+                      "AccountOperation": "SUBTRACT",
+                      "BalanceAfter": {
+                        "Value": {
+                          "Numerator": 970000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "ProductReference": {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferringPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductOfferingBasePrice": {
+                    "Value": {
+                      "Numerator": 10000000,
+                      "DenominatorExponent": 6
+                    },
+                    "UnitOfMeasurement": "usd"
+                  },
+                  "ProductOfferingDiscountPrice": null,
+                  "PriceFromExternalMoney": null
+                },
+                "PriceResult": {
+                  "PricingActionId": "e6116d30ec2bd45b28739214a1dedfac",
+                  "ResultCode": 3,
+                  "PricingActionType": null,
+                  "PricingActionName": null,
+                  "TaxClass": null,
+                  "AmountType": null,
+                  "ProductBucketChanges": [],
+                  "BillingAccountBucketChanges": [
+                    {
+                      "BillingAccountId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "BillingAccountSpecificationId": "4da18271-7af5-4990-9f2b-aeef5ad05521",
+                      "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+                      "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+                      "BalanceChange": {
+                        "Value": {
+                          "Numerator": 10000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      },
+                      "AccountOperation": "SUBTRACT",
+                      "BalanceAfter": {
+                        "Value": {
+                          "Numerator": 960000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "ProductReference": {
+                  "ProductOfferingId": "c3a0303f-ed1b-4640-bf92-cd7561ac2102",
+                  "ProductOfferringPriceId": "c6c5135469dc867f70462c5dca978209",
+                  "ProductOfferingBasePrice": {
+                    "Value": {
+                      "Numerator": 10000000,
+                      "DenominatorExponent": 6
+                    },
+                    "UnitOfMeasurement": "usd"
+                  },
+                  "ProductOfferingDiscountPrice": null,
+                  "PriceFromExternalMoney": null
+                },
+                "PriceResult": {
+                  "PricingActionId": "e6116d30ec2bd45b28739214a1dedfac",
+                  "ResultCode": 3,
+                  "PricingActionType": null,
+                  "PricingActionName": null,
+                  "TaxClass": null,
+                  "AmountType": null,
+                  "ProductBucketChanges": [],
+                  "BillingAccountBucketChanges": [
+                    {
+                      "BillingAccountId": "6260FA8AF7E94CFAA233762A42A72A8B",
+                      "BillingAccountSpecificationId": "4da18271-7af5-4990-9f2b-aeef5ad05521",
+                      "BillingAccountBucketId": "CF8AF6AD9D854E57A467E8286F2D60D6",
+                      "BillingAccountBucketSpecificationId": "1da81516-4e7b-449b-a149-ccf320ea5c41",
+                      "BalanceChange": {
+                        "Value": {
+                          "Numerator": 10000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      },
+                      "AccountOperation": "SUBTRACT",
+                      "BalanceAfter": {
+                        "Value": {
+                          "Numerator": 980000000,
+                          "DenominatorExponent": 6
+                        },
+                        "UnitOfMeasurement": "usd"
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "BasketProposedPrices": null,
+            "RemainingExternalMoney": null
+          }
+        },
+        {
+          "ResponseData": {
+            "Data size": 1245,
+            "Schema id": 87,
+            "Duplicate detection Id": "DuplicateDetectionId2",
+            "Time to live": 3000,
+            "Response code": "OK"
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.211+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "ContractStatusProposalActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "ContractStatusProposalActivity",
+  "Methods": [
+    {
+      "Name": "step1FetchData",
+      "Info": [
+        "FETCH_DATA"
+      ],
+      "ReturnValue": "NEXT ACTIVITY"
+    }
+  ]
+}
+2019-02-14T16:27:29.221+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "EventActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "EventActivity",
+  "Methods": [
+    {
+      "Name": "run",
+      "Info": [
+        {
+          "Selected schema": "com.ericsson.bss.cha.event.schema.BalanceCreationEvent.1.5.0",
+          "Because the following conditions was true": [
+            "c0000041 is not active",
+            "c0000047 is not active",
+            "c0000080 is not active"
+          ]
+        },
+        "Preparing generation of event: com.ericsson.bss.cha.event.schema.BalanceCreationEvent.1.5.0"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.634+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "AsyncUpdateBucketsDataActivityForDuplicateDetection", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "AsyncUpdateBucketsDataActivityForDuplicateDetection",
+  "Methods": [
+    {
+      "Name": "updateCustomer",
+      "Info": null,
+      "ReturnValue": "ASYNC THEN 'NEXT'"
+    },
+    {
+      "Name": "updateCustomerResultValidation",
+      "Info": [
+        {
+          "Skipping generation of event of type": "com.ericsson.bss.cha.event.schema.CharacteristicValueUpdateNotificationEvent.1.0.0",
+          "Because condition was false": "Should have at least one CharacteristicValueNotificationProposal, but there was none"
+        },
+        {
+          "Skipping generation of event of type": "com.ericsson.bss.cha.event.schema.ProductStatusNotificationEvent.3.5.0",
+          "Because condition was false": "Should have at least one ProductStatusProposal, but there was none"
+        },
+        {
+          "Generating event(s) of type": "com.ericsson.bss.cha.event.schema.BalanceCreationEvent.1.5.0",
+          "Because condition was true": "c0000018 is active and there is at least one newly provisioned bucket",
+          "Number of events": 1,
+          "Events": [
+            "balanceCreationResult 
+   billingAccountBucketChanges (Array, size : 1) 
+      accountOperation = SET 
+      balanceChange 
+         amount 
+            decimalPlaces = 6 
+            number = 1000000000 
+         unitOfMeasurement = usd 
+      billingAccountBucketId = CF8AF6AD9D854E57A467E8286F2D60D6 
+      billingAccountBucketSpecificationId = 1da81516-4e7b-449b-a149-ccf320ea5c41 
+      billingAccountId = 6260FA8AF7E94CFAA233762A42A72A8B 
+      billingAccountSpecificationId = 4da18271-7af5-4990-9f2b-aeef5ad05521 
+      customerBillCycleId = <empty> 
+      sourceCustomerBillCycleId = <empty> 
+   productBucketChanges (Array, size : 0) 
+bucketSnapshots 
+   billingAccountBucketBalances (Array, size : 1) 
+      balance 
+         amount 
+            decimalPlaces = 6 
+            number = 1000000000 
+         unitOfMeasurement = usd 
+      billingAccountBucketId = CF8AF6AD9D854E57A467E8286F2D60D6 
+      billingAccountBucketSpecificationId = 1da81516-4e7b-449b-a149-ccf320ea5c41 
+      billingAccountId = 6260FA8AF7E94CFAA233762A42A72A8B 
+      billingAccountSpecificationId = 4da18271-7af5-4990-9f2b-aeef5ad05521 
+   productBucketBalances (Array, size : 0) 
+customerInformation 
+   additionalData (Map, size : 0) 
+   communicationId = <empty> 
+   contractId = <empty> 
+   customerId = 326B513AB384427C8D703C9A867661C2 
+eventHeader 
+   chargingInstanceHost = sekalvd546 
+   eventCreationTime 
+      timeZoneType = SYSTEM_TIME_ZONE 
+      timestamp = 2019-02-14T15:27:29.357Z 
+      zoneName = <empty> 
+   recordUniqueId = d0784ebb-92f8-402a-bf0f-05df9876dd4e 
+genericInterfaceParameters 
+   externalParameterSet 
+      additionalData = <empty> 
+      instanceId = <empty> 
+      reason = <empty> 
+      timeStamp = <empty> 
+      transactionId = <empty> 
+      userId = <empty> 
+   originatingParameterSet 
+      instanceId = sekalvd546 
+      reason = BalanceCreationEvent 
+      timeStamp = 2019-02-14T16:27:29.365+01:00 
+      transactionId = c597cd63-7817-4b21-95f5-edec0ad99ed6 
+      userId = <empty> 
+   passingParameterSet 
+      passingParameterSetItems (Array, size : 0) 
+   tracingParameterSet 
+      traceCoverage = <empty> 
+      traceId = <empty> 
+      tracePointLevel = <empty> 
+      transactionId = <empty> 
+schemaName = BalanceCreationEvent 
+schemaNameSpace = com.ericsson.bss.cha.event.schema 
+schemaVersion = 1.5.0 
+"
+          ]
+        },
+        {},
+        "Processing post update actions"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.685+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "CilMessageSenderActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "CilMessageSenderActivity",
+  "Methods": [
+    {
+      "Name": "send",
+      "Info": [
+        "Sending event to cil message sender service. Key:[cha_partition/customer_ma/326B513AB384427C8D703C9A867661C2/e/d0784ebb-92f8-402a-bf0f-05df9876dd4e]"
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+2019-02-14T16:27:29.701+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "PolicyReevaluationDeterminationActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "PolicyReevaluationDeterminationActivity",
+  "Methods": [
+    {
+      "Name": "fetchData",
+      "Info": [
+        "No policy sessions, skipping rest of activity"
+      ],
+      "ReturnValue": "NEXT ACTIVITY"
+    }
+  ]
+}
+2019-02-14T16:27:29.729+01:00 - SLM={"TraceId": "CHA0000000377", "TransactionId": "1178401530", "TracePointName": "SendDuplicateDetectableResponseActivity", "TracePointContext": "CHA-CORE/CHA-PUR-REST", "TracePointLevel": "1", "ContentType": "TEXT"}/=SLM
+{
+  "Runtimeflow": "AdminCharge_Reserve",
+  "Activity": "SendDuplicateDetectableResponseActivity",
+  "Methods": [
+    {
+      "Name": "sendDuplicateDetectableResponse",
+      "Info": [
+        {
+          "!! Response": {
+            "Flow result code": "SUCCESS_COMMITTED",
+            "Optional message": {
+              "ResultCode": "SUCCESS",
+              "ResponseBytes (Size)": 1245,
+              "ResponseSchemaId": 87,
+              "ResponseCode": "OK"
+            }
+          }
+        }
+      ],
+      "ReturnValue": "NEXT"
+    }
+  ]
+}
+

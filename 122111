@@ -1,7 +1,7 @@
 AssetForProductCounter
 ApplyingResult
 "Name": "step3CreateCharacteristicValueUpdateResult"
-
+Product without Product id. Product will be searched using
 {
     "glossary": {
         "title": "example glossary",
@@ -210,4 +210,4 @@ SDFSDFSDFSDFSDF
                 }
               
 }
-2018-12-04T11:52:36.572+01:00 - SLM={"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT"}/=SLM
+2018-12-04T11:52:36.572+01:00 - SLM={"TraceId": "CHA0000000150", "TransactionId": "1130919756", "TracePointName": "OnlineSessionRequestImpl", "TracePointContext": "CHA-CORE/CHA-ONL-DCCA", "TracePointLevel": "0", "SessionId": "MAIN_SESSION_ID", "ContentType": "TEXT" }/=SLM
